@@ -4,7 +4,7 @@
   "postCreateCommand": "dotnet restore *.csproj",
   "settings": {
     "terminal.integrated.shell.linux": "/bin/bash",
-    "terminal.integrated.fontSize": 10
+    "terminal.integrated.fontSize": 12
   },
   "extensions": [
     "ms-dotnettools.csharp"
