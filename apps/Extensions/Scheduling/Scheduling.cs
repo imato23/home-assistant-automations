@@ -7,7 +7,7 @@ namespace Extensions.Scheduling;
 /// <summary>
 ///     Showcase the scheduling capabilities of NetDaemon
 /// </summary>
-[NetDaemonApp]
+//[NetDaemonApp]
 public class SchedulingApp
 {
     public SchedulingApp(IHaContext ha, INetDaemonScheduler scheduler)
@@ -18,7 +18,7 @@ public class SchedulingApp
             // Make sure we do not flood the notifications :)
             if (count++ < 3)
                 ha.CallService("notify", "persistent_notification",
-                    data: new {message = "This is a scheduled action!", title = "Schedule!"});
+                    data: new { message = "This is a scheduled action!", title = "Schedule!" });
         });
     }
 }
