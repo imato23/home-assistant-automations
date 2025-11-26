@@ -21,6 +21,7 @@ try
                 .AddNetDaemonStateManager()
                 .AddNetDaemonScheduler()
                 .AddHomeAssistantGenerated()
+                .AddCustomRegistrations()
         )
         .Build()
         .RunAsync()
