@@ -8,5 +8,8 @@
   },
   "extensions": [
     "ms-dotnettools.csharp"
+  ],
+  "mounts": [
+    "source=/mnt/homeassistant/netdaemon6,target=/mnt/homeassistant/netdaemon6,type=bind,consistency=cached"
   ]
 }
