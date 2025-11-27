@@ -1,9 +1,12 @@
 using System.Threading;
 
-public struct NotificationAction
+namespace HomeAssistantAutomations.apps.Automations.Windows
 {
-  public const string Mute = "MUTE";
-  public const string SnoozeShort = "SNOOZE1h";
-  public const string SnoozeLong = "SNOOZE2h";
+  public struct NotificationAction
+  {
+    public const string Mute = "MUTE";
+    public const string SnoozeShort = "SNOOZE_SHORT";
+    public const string SnoozeLong = "SNOOZE_LONG";
 
+  }
 }

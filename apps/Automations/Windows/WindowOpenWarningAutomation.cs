@@ -1,34 +1,28 @@
 using HomeAssistantAutomations.apps.Util;
-using HomeAssistantGenerated;
 using NetDaemon.HassModel.Entities;
 using System.Diagnostics;
-using System.Reactive.Concurrency;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace HomeAssistantAutomations.apps.Automations.Windows
 {
-    [NetDaemonApp]
-    public class WindowOpenWarningAutomation : Automation<WindowOpenWarningAutomation>, IAsyncInitializable
+    public abstract class WindowOpenWarningAutomation<T> : Automation<T>, IAsyncInitializable where T : class
     {
         private IPiperTtsService _piperTtsService;
         private CancellationTokenSource _cancellationTokenSource = new CancellationTokenSource();
-        private readonly BinarySensorEntity _windowEntity;
-        private readonly TimeSpan _defaultWarningInterval = TimeSpan.FromMinutes(1);
-        private readonly TimeSpan _shortWarningInterval = TimeSpan.FromMinutes(2);
-        private readonly TimeSpan _longWarningInterval = TimeSpan.FromMinutes(3);
-        private readonly string windowName = "Terassentür";
-
+        private readonly WindowMetadata windowData;
         private Stopwatch openingTime = new Stopwatch();
 
-        public WindowOpenWarningAutomation(
+        protected WindowOpenWarningAutomation(
             IHaContext haContext,
-            ILogger<WindowOpenWarningAutomation> logger,
+            ILogger<T> logger,
             IPiperTtsService piperTtsService) : base(haContext, logger)
         {
-            _windowEntity = Entities.BinarySensor.WohnzimmerTerrassentuerStatus;
             _piperTtsService = piperTtsService;
+            windowData = Initialize();
         }
+
+        protected abstract WindowMetadata Initialize();
 
         public async Task InitializeAsync(CancellationToken cancellationToken)
         {
@@ -38,7 +32,7 @@ namespace HomeAssistantAutomations.apps.Automations.Windows
 
         private async Task Start()
         {
-            _windowEntity
+            windowData.WindowEntity
                 .StateChanges()
                 .SubscribeAsync(async stateChange =>
                 {
@@ -46,19 +40,19 @@ namespace HomeAssistantAutomations.apps.Automations.Windows
                     {
                         openingTime.Reset();
                         openingTime.Start();
-                        Logger.LogInformation("{window} has been opened", windowName);
+                        Logger.LogInformation("{window} has been opened", windowData.WindowName);
 
                         _cancellationTokenSource = new CancellationTokenSource();
                         _ = StartTimerAndNotify(
-                            _defaultWarningInterval,
-                            _defaultWarningInterval,
+                            windowData.DefaultWarningInterval,
+                            windowData.DefaultWarningInterval,
                             _cancellationTokenSource.Token)
-                        .ContinueWith(x => Logger.LogDebug("Notify for {window} has been cancelled", windowName));
+                        .ContinueWith(x => Logger.LogDebug("Notify for {window} has been cancelled", windowData.WindowName));
                     }
                     else
                     {
                         openingTime.Reset();
-                        Logger.LogInformation("{window} has been closed", windowName);
+                        Logger.LogInformation("{window} has been closed", windowData.WindowName);
                         if (_cancellationTokenSource != null)
                         {
                             _cancellationTokenSource.Cancel();
@@ -71,11 +65,11 @@ namespace HomeAssistantAutomations.apps.Automations.Windows
         {
             bool isFirstIntervall = true;
 
-            while (_windowEntity.EntityState.IsOn())
+            while (windowData.WindowEntity.EntityState.IsOn())
             {
                 TimeSpan interval = isFirstIntervall ? firstInterval : followingInterval;
 
-                Logger.LogInformation("Starting open-warning timer for {window} with {warningIntervall} min", windowName, interval.Minutes);
+                Logger.LogInformation("Starting open-warning timer for {window} with {warningIntervall} min", windowData.WindowName, interval.TotalMinutes);
                 await Task.Delay(interval, cancellationToken);
                 await Notify(cancellationToken);
                 isFirstIntervall = false;
@@ -89,7 +83,7 @@ namespace HomeAssistantAutomations.apps.Automations.Windows
                 return;
             }
 
-            Logger.LogInformation("Sending open-warning message for {window}", windowName);
+            Logger.LogInformation("Sending open-warning message for {window}", windowData.WindowName);
 
             var data = new
             {
@@ -97,34 +91,34 @@ namespace HomeAssistantAutomations.apps.Automations.Windows
                 {
                     new
                     {
-                        action = NotificationAction.Mute,
+                        action = $"{windowData.WindowName}|{NotificationAction.Mute}" ,
                         title = "Stummschalten",
                     },
                     new
                     {
-                        action = NotificationAction.SnoozeShort,
-                        title = $"{_shortWarningInterval.TotalMinutes} min Pausieren"
+                        action = $"{windowData.WindowName}|{NotificationAction.SnoozeShort}" ,
+                        title = $"{windowData.ShortWarningInterval.TotalMinutes} min Pausieren"
                     },
                     new
                     {
-                        action = NotificationAction.SnoozeLong,
-                        title = $"{_longWarningInterval.TotalMinutes} min Pausieren"
+                        action = $"{windowData.WindowName}|{NotificationAction.SnoozeLong}" ,
+                        title = $"{windowData.LongWarningInterval.TotalMinutes} min Pausieren"
                     }
                 }
             };
 
-            string article = windowName.ToLowerInvariant().EndsWith("fenster") ? "Das" : "Die";
-            string title = $"{article} {windowName} ist noch geöffnet";
-            string message = $"{article} {windowName} ist bereits seit {openingTime.Elapsed.Minutes} min geöffnet";
+            string article = windowData.WindowName.ToLowerInvariant().EndsWith("fenster") ? "Das" : "Die";
+            string title = $"{article} {windowData.WindowName} ist noch geöffnet";
+            string message = $"{article} {windowData.WindowName} ist bereits seit {Math.Round(openingTime.Elapsed.TotalMinutes)} min geöffnet";
 
-            Services.Notify.MobileAppSmartphoneThomas(
+            Services.Notify.AllSmartphones(
                 message: message,
                 title: title,
                 data: data);
 
-            // _piperTtsService.Speak(
-            //     Entities.MediaPlayer.KucheLautsprecher,
-            //     $"Du hast ausreichend gelüftet, bitte schließe {article} {windowName}");
+            _piperTtsService.Speak(
+                Entities.MediaPlayer.KucheLautsprecher,
+                $"Du hast ausreichend gelüftet, bitte schließe {article} {windowData.WindowName}");
         }
 
         private IDisposable SubscribeToNotifyResponse()
@@ -139,9 +133,18 @@ namespace HomeAssistantAutomations.apps.Automations.Windows
                         return;
                     }
 
-                    Logger.LogDebug("Received smartphone notification response event {event} for {window}", action, windowName);
+                    string[] split = action.Split("|");
+                    string windowName = split[0];
+                    string actionName = split[1];
 
-                    switch (action)
+                    if (windowName != windowData.WindowName)
+                    {
+                        return;
+                    }
+
+                    Logger.LogDebug("Received smartphone notification response event {event} for {window}", action, windowData.WindowName);
+
+                    switch (actionName)
                     {
                         case NotificationAction.Mute:
                             _cancellationTokenSource.Cancel();
@@ -151,23 +154,23 @@ namespace HomeAssistantAutomations.apps.Automations.Windows
                             _cancellationTokenSource.Cancel();
                             _cancellationTokenSource = new CancellationTokenSource();
                             _ = StartTimerAndNotify(
-                                _shortWarningInterval,
-                                _defaultWarningInterval,
+                                windowData.ShortWarningInterval,
+                                windowData.DefaultWarningInterval,
                                 _cancellationTokenSource.Token)
-                                    .ContinueWith(x => Logger.LogDebug("Notify for {window} has been cancelled", windowName)); ;
+                                    .ContinueWith(x => Logger.LogDebug("Notify for {window} has been cancelled", windowData.WindowName)); ;
                             break;
 
                         case NotificationAction.SnoozeLong:
                             _cancellationTokenSource.Cancel();
                             _cancellationTokenSource = new CancellationTokenSource();
                             _ = StartTimerAndNotify(
-                                _longWarningInterval,
-                                _defaultWarningInterval,
+                                windowData.LongWarningInterval,
+                                windowData.DefaultWarningInterval,
                                 _cancellationTokenSource.Token);
                             break;
 
                         default:
-                            Logger.LogWarning("Received unknown action {action} for {window}", action, windowName);
+                            Logger.LogWarning("Received unknown action {action} for {window}", action, windowData.WindowName);
                             break;
                     }
                 });
