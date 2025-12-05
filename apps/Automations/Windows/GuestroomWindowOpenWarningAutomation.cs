@@ -8,7 +8,7 @@ namespace HomeAssistantAutomations.apps.Automations.Windows
     public GuestroomWindowOpenWarningAutomation(
       IHaContext haContext,
       ILogger<GuestroomWindowOpenWarningAutomation> logger,
-      IPiperTtsService piperTtsService)
+      INotificationService piperTtsService)
     : base(haContext, logger, piperTtsService)
     {
     }

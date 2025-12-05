@@ -8,7 +8,7 @@ namespace HomeAssistantAutomations.apps.Automations.Windows
     public OfficeWindowOpenWarningAutomation(
       IHaContext haContext,
       ILogger<OfficeWindowOpenWarningAutomation> logger,
-      IPiperTtsService piperTtsService)
+      INotificationService piperTtsService)
     : base(haContext, logger, piperTtsService)
     {
     }

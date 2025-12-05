@@ -8,7 +8,7 @@ namespace HomeAssistantAutomations.apps.Automations.Windows
     public ToiletWindowOpenWarningAutomation(
       IHaContext haContext,
       ILogger<ToiletWindowOpenWarningAutomation> logger,
-      IPiperTtsService piperTtsService)
+      INotificationService piperTtsService)
     : base(haContext, logger, piperTtsService)
     {
     }
