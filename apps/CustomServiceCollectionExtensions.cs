@@ -5,7 +5,7 @@ public static class CustomServiceCollectionExtensions
 {
   public static IServiceCollection AddCustomRegistrations(this IServiceCollection serviceCollection)
   {
-    serviceCollection.AddScoped<IPiperTtsService, PiperTtsService>();
+    serviceCollection.AddScoped<INotificationService, NotificationService>();
 
     return serviceCollection;
   }

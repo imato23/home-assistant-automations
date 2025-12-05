@@ -8,7 +8,7 @@ namespace HomeAssistantAutomations.apps.Automations.Windows
     public TerraceDoorOpenWarningAutomation(
       IHaContext haContext,
       ILogger<TerraceDoorOpenWarningAutomation> logger,
-      IPiperTtsService piperTtsService)
+      INotificationService piperTtsService)
     : base(haContext, logger, piperTtsService)
     {
     }
@@ -18,7 +18,7 @@ namespace HomeAssistantAutomations.apps.Automations.Windows
       return new WindowMetadata
       {
         WindowName = "Terrassentür",
-        WindowEntity = Entities.BinarySensor.WohnzimmerTerrassentuerStatus,
+        WindowEntity = Entities.BinarySensor.WohnzimmerTerrassentuerStatus
       };
     }
   }

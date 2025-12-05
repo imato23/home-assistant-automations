@@ -1,5 +1,6 @@
 using HomeAssistantAutomations.apps.Util;
 using NetDaemon.HassModel.Entities;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
@@ -8,7 +9,7 @@ namespace HomeAssistantAutomations.apps.Automations.Windows
 {
     public abstract class WindowOpenWarningAutomation<T> : Automation<T>, IAsyncInitializable where T : class
     {
-        private IPiperTtsService _piperTtsService;
+        private INotificationService _notificationService;
         private CancellationTokenSource _cancellationTokenSource = new CancellationTokenSource();
         private readonly WindowMetadata windowData;
         private Stopwatch openingTime = new Stopwatch();
@@ -16,9 +17,9 @@ namespace HomeAssistantAutomations.apps.Automations.Windows
         protected WindowOpenWarningAutomation(
             IHaContext haContext,
             ILogger<T> logger,
-            IPiperTtsService piperTtsService) : base(haContext, logger)
+            INotificationService notificationService) : base(haContext, logger)
         {
-            _piperTtsService = piperTtsService;
+            _notificationService = notificationService;
             windowData = Initialize();
         }
 
@@ -85,39 +86,27 @@ namespace HomeAssistantAutomations.apps.Automations.Windows
 
             Logger.LogInformation("Sending open-warning message for {window}", windowData.WindowName);
 
-            var data = new
-            {
-                actions = new[]
-                {
-                    new
-                    {
-                        action = $"{windowData.WindowName}|{NotificationAction.Mute}" ,
-                        title = "Stummschalten",
-                    },
-                    new
-                    {
-                        action = $"{windowData.WindowName}|{NotificationAction.SnoozeShort}" ,
-                        title = $"{windowData.ShortWarningInterval.TotalMinutes} min Pausieren"
-                    },
-                    new
-                    {
-                        action = $"{windowData.WindowName}|{NotificationAction.SnoozeLong}" ,
-                        title = $"{windowData.LongWarningInterval.TotalMinutes} min Pausieren"
-                    }
-                }
-            };
-
+            string tag = $"window_open_warning_{windowData.WindowName}";
             string article = windowData.WindowName.ToLowerInvariant().EndsWith("fenster") ? "Das" : "Die";
             string title = $"{article} {windowData.WindowName} ist noch geöffnet";
             string message = $"{article} {windowData.WindowName} ist bereits seit {Math.Round(openingTime.Elapsed.TotalMinutes)} min geöffnet";
 
-            Services.Notify.AllSmartphones(
-                message: message,
-                title: title,
-                data: data);
+            List<Util.NotificationAction> actions =
+            [
+              new(
+                $"{windowData.WindowName}|{NotificationAction.Mute}",
+                "Stummschalten"),
+              new(
+                $"{windowData.WindowName}|{NotificationAction.SnoozeShort}",
+                $"{windowData.ShortWarningInterval.TotalMinutes} min Pausieren"),
+              new(
+                $"{windowData.WindowName}|{NotificationAction.SnoozeLong}",
+                $"{windowData.LongWarningInterval.TotalMinutes} min Pausieren")
+            ];
 
-            _piperTtsService.Speak(
-                Entities.MediaPlayer.KucheLautsprecher,
+            _notificationService.NotifySmartphone(Smartphone.All, title, message, tag, 0, actions);
+
+            _notificationService.SpeakOnAllMediaPlayers(
                 $"Du hast ausreichend gelüftet, bitte schließe {article} {windowData.WindowName}");
         }
 
