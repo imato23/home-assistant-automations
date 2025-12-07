@@ -33,33 +33,44 @@ namespace HomeAssistantAutomations.apps.Automations.Windows
 
         private async Task Start()
         {
+            if (windowData.WindowEntity.IsOn())
+            {
+                // Window is already open on HA start
+                StartTimerAutomation(true);
+            }
+
             windowData.WindowEntity
                 .StateChanges()
                 .SubscribeAsync(async stateChange =>
                 {
-                    if (stateChange.New.IsOn())
-                    {
-                        openingTime.Reset();
-                        openingTime.Start();
-                        Logger.LogInformation("{window} has been opened", windowData.WindowName);
-
-                        _cancellationTokenSource = new CancellationTokenSource();
-                        _ = StartTimerAndNotify(
-                            windowData.DefaultWarningInterval,
-                            windowData.DefaultWarningInterval,
-                            _cancellationTokenSource.Token)
-                        .ContinueWith(x => Logger.LogDebug("Notify for {window} has been cancelled", windowData.WindowName));
-                    }
-                    else
-                    {
-                        openingTime.Reset();
-                        Logger.LogInformation("{window} has been closed", windowData.WindowName);
-                        if (_cancellationTokenSource != null)
-                        {
-                            _cancellationTokenSource.Cancel();
-                        }
-                    }
+                    StartTimerAutomation(stateChange.New.IsOn());
                 });
+        }
+
+        private void StartTimerAutomation(bool isWindowOpen)
+        {
+            if (isWindowOpen)
+            {
+                openingTime.Reset();
+                openingTime.Start();
+                Logger.LogInformation("{window} has been opened", windowData.WindowName);
+
+                _cancellationTokenSource = new CancellationTokenSource();
+                _ = StartTimerAndNotify(
+                    windowData.DefaultWarningInterval,
+                    windowData.DefaultWarningInterval,
+                    _cancellationTokenSource.Token)
+                .ContinueWith(x => Logger.LogDebug("Notify for {window} has been cancelled", windowData.WindowName));
+            }
+            else
+            {
+                openingTime.Reset();
+                Logger.LogInformation("{window} has been closed", windowData.WindowName);
+                if (_cancellationTokenSource != null)
+                {
+                    _cancellationTokenSource.Cancel();
+                }
+            }
         }
 
         private async Task StartTimerAndNotify(TimeSpan firstInterval, TimeSpan followingInterval, CancellationToken cancellationToken)
@@ -81,6 +92,7 @@ namespace HomeAssistantAutomations.apps.Automations.Windows
         {
             if (cancellationToken.IsCancellationRequested)
             {
+                Logger.LogInformation("Stopping open-warning timer for {window}", windowData.WindowName);
                 return;
             }
 
