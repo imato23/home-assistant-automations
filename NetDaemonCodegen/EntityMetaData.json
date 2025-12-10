@@ -9,9 +9,14 @@
           "cSharpName": "BrowserWandTabletScreen"
         },
         {
-          "id": "light.wohnzimmer_leuchte_deckenleuchte",
-          "friendlyName": "Wohnzimmer Leuchte Deckenleuchte Steuerung",
-          "cSharpName": "WohnzimmerLeuchteDeckenleuchte"
+          "id": "light.kuche_leuchte_hauptlicht_steuerung",
+          "friendlyName": "K\u00FCche Leuchte Hauptlicht",
+          "cSharpName": "KucheLeuchteHauptlichtSteuerung"
+        },
+        {
+          "id": "light.wohnzimmer_leuchte_hauptlicht_steuerung",
+          "friendlyName": "Wohnzimmer Leuchte Hauptlicht",
+          "cSharpName": "WohnzimmerLeuchteHauptlichtSteuerung"
         },
         {
           "id": "light.wohnzimmer_licht_tv_lowboard",
@@ -159,11 +164,6 @@
           "id": "media_player.wohnzimmer_tv",
           "friendlyName": "Wohnzimmer TV",
           "cSharpName": "WohnzimmerTv"
-        },
-        {
-          "id": "media_player.wohnzimmer_tv_2",
-          "friendlyName": "Wohnzimmer TV",
-          "cSharpName": "WohnzimmerTv2"
         }
       ],
       "attributes": [
@@ -397,7 +397,7 @@
         {
           "jsonName": "open_sensors",
           "cSharpName": "OpenSensors",
-          "clrType": null
+          "clrType": "System.Object"
         },
         {
           "jsonName": "bypassed_sensors",
@@ -448,11 +448,6 @@
           "id": "automation.backup",
           "friendlyName": "Backup",
           "cSharpName": "Backup"
-        },
-        {
-          "id": "automation.badezimmer_fenster_offen_warnung",
-          "friendlyName": "Badezimmer Fenster Offen Warnung",
-          "cSharpName": "BadezimmerFensterOffenWarnung"
         },
         {
           "id": "automation.badezimmer_heizung_steuerung",
@@ -510,6 +505,11 @@
           "cSharpName": "Homeoffice"
         },
         {
+          "id": "automation.licht_ausschalten_wenn_tv_ausgeschaltet_wird",
+          "friendlyName": "LIcht ausschalten wenn TV ausgeschaltet wird",
+          "cSharpName": "LichtAusschaltenWennTvAusgeschaltetWird"
+        },
+        {
           "id": "automation.neue_automation",
           "friendlyName": "01a Geschirrsp\u00FCler vorbereiten",
           "cSharpName": "NeueAutomation"
@@ -530,24 +530,24 @@
           "cSharpName": "NeueAutomation4"
         },
         {
+          "id": "automation.neue_automation_5",
+          "friendlyName": "Weihnachtssterne manuell ein/aus",
+          "cSharpName": "NeueAutomation5"
+        },
+        {
+          "id": "automation.notify_of_motion_tts",
+          "friendlyName": "Notify of Motion TTS",
+          "cSharpName": "NotifyOfMotionTts"
+        },
+        {
           "id": "automation.online",
           "friendlyName": "Online",
           "cSharpName": "Online"
         },
         {
-          "id": "automation.philips_hue_dimmer_switch_v2_zigbee2mqtt",
-          "friendlyName": "Philips Hue Dimmer switch v2 (Zigbee2MQTT)",
-          "cSharpName": "PhilipsHueDimmerSwitchV2Zigbee2mqtt"
-        },
-        {
           "id": "automation.sabine_ist_auf_dem_heimweg",
           "friendlyName": "Sabine ist auf dem Heimweg ",
           "cSharpName": "SabineIstAufDemHeimweg"
-        },
-        {
-          "id": "automation.schlafzimmer_fenster_offen_warnung",
-          "friendlyName": "Schlafzimmer Fenster Offen Warnung",
-          "cSharpName": "SchlafzimmerFensterOffenWarnung"
         },
         {
           "id": "automation.smartwatch_aufgeladen",
@@ -565,29 +565,14 @@
           "cSharpName": "StromzahlerUngultigeWerteFiltern"
         },
         {
-          "id": "automation.terassentuer_offen_warnung_neu",
-          "friendlyName": "Terrassent\u00FCr offen Warnung",
-          "cSharpName": "TerassentuerOffenWarnungNeu"
+          "id": "automation.wand_tablet_bildschirm_ausschalten",
+          "friendlyName": "Wand Tablet Bildschirm ausschalten",
+          "cSharpName": "WandTabletBildschirmAusschalten"
         },
         {
-          "id": "automation.terassentur_offen_warnung",
-          "friendlyName": "Terassent\u00FCr Offen Warnung",
-          "cSharpName": "TerassenturOffenWarnung"
-        },
-        {
-          "id": "automation.terassentur_offen_warnung_2",
-          "friendlyName": "Terassent\u00FCr offen Warnung (NEU)",
-          "cSharpName": "TerassenturOffenWarnung2"
-        },
-        {
-          "id": "automation.terrassentuer_offen_warnung_handling",
-          "friendlyName": "Terrassent\u00FCr Offen Warnung Dialog Handling",
-          "cSharpName": "TerrassentuerOffenWarnungHandling"
-        },
-        {
-          "id": "automation.terrassentur_offen_warnung_zurucksetzen",
-          "friendlyName": "Terrassent\u00FCr Offen Warnung Zur\u00FCcksetzen",
-          "cSharpName": "TerrassenturOffenWarnungZurucksetzen"
+          "id": "automation.wand_tablet_bildschirm_einschalten",
+          "friendlyName": "Wand Tablet Bildschirm einschalten",
+          "cSharpName": "WandTabletBildschirmEinschalten"
         },
         {
           "id": "automation.waschetrockner_fertig_meldung",
@@ -610,9 +595,14 @@
           "cSharpName": "Wc"
         },
         {
-          "id": "automation.wc_fenster_offen_warnung",
-          "friendlyName": "WC Fenster Offen Warnung",
-          "cSharpName": "WcFensterOffenWarnung"
+          "id": "automation.weihnachtsstern_ausschalten",
+          "friendlyName": "Weihnachtsstern ausschalten",
+          "cSharpName": "WeihnachtssternAusschalten"
+        },
+        {
+          "id": "automation.weihnachtssterne_einschalten",
+          "friendlyName": "Weihnachtssterne einschalten",
+          "cSharpName": "WeihnachtssterneEinschalten"
         },
         {
           "id": "automation.willkommens_nachricht",
@@ -682,6 +672,11 @@
           "cSharpName": "AllWindows"
         },
         {
+          "id": "binary_sensor.badezimmer_fenster",
+          "friendlyName": "Badezimmer Fenster Status",
+          "cSharpName": "BadezimmerFenster"
+        },
+        {
           "id": "binary_sensor.badezimmer_fenster_batterie",
           "friendlyName": "Badezimmer Fenster Batterie",
           "cSharpName": "BadezimmerFensterBatterie"
@@ -690,11 +685,6 @@
           "id": "binary_sensor.badezimmer_fenster_battery_plus_low_2",
           "friendlyName": "Badezimmer Fenster Akku fast leer",
           "cSharpName": "BadezimmerFensterBatteryPlusLow2"
-        },
-        {
-          "id": "binary_sensor.badezimmer_fenster_contact",
-          "friendlyName": "Badezimmer Fenster Status",
-          "cSharpName": "BadezimmerFensterContact"
         },
         {
           "id": "binary_sensor.badezimmer_fenster_status",
@@ -773,42 +763,42 @@
         },
         {
           "id": "binary_sensor.buro_steckdose_schreibtisch_sabine_overcurrent",
-          "friendlyName": "B\u00FCro Steckdose Schreibtisch Sabine Overcurrent",
+          "friendlyName": "B\u00FCro Steckdose Schreibtisch Sabine \u00DCberstrom",
           "cSharpName": "BuroSteckdoseSchreibtischSabineOvercurrent"
         },
         {
           "id": "binary_sensor.buro_steckdose_schreibtisch_sabine_overheating",
-          "friendlyName": "B\u00FCro Steckdose Schreibtisch Sabine Overheating",
+          "friendlyName": "B\u00FCro Steckdose Schreibtisch Sabine \u00DCberhitzung",
           "cSharpName": "BuroSteckdoseSchreibtischSabineOverheating"
         },
         {
           "id": "binary_sensor.buro_steckdose_schreibtisch_sabine_overpowering",
-          "friendlyName": "B\u00FCro Steckdose Schreibtisch Sabine Overpowering",
+          "friendlyName": "B\u00FCro Steckdose Schreibtisch Sabine \u00DCberlast",
           "cSharpName": "BuroSteckdoseSchreibtischSabineOverpowering"
         },
         {
           "id": "binary_sensor.buro_steckdose_schreibtisch_sabine_overvoltage",
-          "friendlyName": "B\u00FCro Steckdose Schreibtisch Sabine Overvoltage",
+          "friendlyName": "B\u00FCro Steckdose Schreibtisch Sabine \u00DCberspannung",
           "cSharpName": "BuroSteckdoseSchreibtischSabineOvervoltage"
         },
         {
           "id": "binary_sensor.buro_steckdose_schreibtisch_thomas_overcurrent",
-          "friendlyName": "B\u00FCro Steckdose Schreibtisch Thomas Overcurrent",
+          "friendlyName": "B\u00FCro Steckdose Schreibtisch Thomas \u00DCberstrom",
           "cSharpName": "BuroSteckdoseSchreibtischThomasOvercurrent"
         },
         {
           "id": "binary_sensor.buro_steckdose_schreibtisch_thomas_overheating",
-          "friendlyName": "B\u00FCro Steckdose Schreibtisch Thomas Overheating",
+          "friendlyName": "B\u00FCro Steckdose Schreibtisch Thomas \u00DCberhitzung",
           "cSharpName": "BuroSteckdoseSchreibtischThomasOverheating"
         },
         {
           "id": "binary_sensor.buro_steckdose_schreibtisch_thomas_overpowering",
-          "friendlyName": "B\u00FCro Steckdose Schreibtisch Thomas Overpowering",
+          "friendlyName": "B\u00FCro Steckdose Schreibtisch Thomas \u00DCberlast",
           "cSharpName": "BuroSteckdoseSchreibtischThomasOverpowering"
         },
         {
           "id": "binary_sensor.buro_steckdose_schreibtisch_thomas_overvoltage",
-          "friendlyName": "B\u00FCro Steckdose Schreibtisch Thomas Overvoltage",
+          "friendlyName": "B\u00FCro Steckdose Schreibtisch Thomas \u00DCberspannung",
           "cSharpName": "BuroSteckdoseSchreibtischThomasOvervoltage"
         },
         {
@@ -827,9 +817,19 @@
           "cSharpName": "DieleHaustuerStatus"
         },
         {
+          "id": "binary_sensor.diele_haustuerschloss_status",
+          "friendlyName": "Diele Haust\u00FCrschloss Status",
+          "cSharpName": "DieleHaustuerschlossStatus"
+        },
+        {
           "id": "binary_sensor.diele_haustur_battery_plus_low",
           "friendlyName": "Diele Haust\u00FCr Akku fast leer",
           "cSharpName": "DieleHausturBatteryPlusLow"
+        },
+        {
+          "id": "binary_sensor.diele_hausturschloss_batteriestand",
+          "friendlyName": "Diele Haust\u00FCrschloss Batteriestand",
+          "cSharpName": "DieleHausturschlossBatteriestand"
         },
         {
           "id": "binary_sensor.diele_schalter_praesenz_batterie",
@@ -843,22 +843,22 @@
         },
         {
           "id": "binary_sensor.diele_steckdose_smarthome_overcurrent",
-          "friendlyName": "Diele Steckdose Smarthome Overcurrent",
+          "friendlyName": "Diele Steckdose Smarthome \u00DCberstrom",
           "cSharpName": "DieleSteckdoseSmarthomeOvercurrent"
         },
         {
           "id": "binary_sensor.diele_steckdose_smarthome_overheating",
-          "friendlyName": "Diele Steckdose Smarthome Overheating",
+          "friendlyName": "Diele Steckdose Smarthome \u00DCberhitzung",
           "cSharpName": "DieleSteckdoseSmarthomeOverheating"
         },
         {
           "id": "binary_sensor.diele_steckdose_smarthome_overpowering",
-          "friendlyName": "Diele Steckdose Smarthome Overpowering",
+          "friendlyName": "Diele Steckdose Smarthome \u00DCberlast",
           "cSharpName": "DieleSteckdoseSmarthomeOverpowering"
         },
         {
           "id": "binary_sensor.diele_steckdose_smarthome_overvoltage",
-          "friendlyName": "Diele Steckdose Smarthome Overvoltage",
+          "friendlyName": "Diele Steckdose Smarthome \u00DCberspannung",
           "cSharpName": "DieleSteckdoseSmarthomeOvervoltage"
         },
         {
@@ -890,6 +890,11 @@
           "id": "binary_sensor.gaestezimmer_wandthermostat_batterie",
           "friendlyName": "G\u00E4stezimmer Wandthermostat Batterie",
           "cSharpName": "GaestezimmerWandthermostatBatterie"
+        },
+        {
+          "id": "binary_sensor.garage_klimasensor_battery_plus_low",
+          "friendlyName": "Garage Klimasensor Akku fast leer",
+          "cSharpName": "GarageKlimasensorBatteryPlusLow"
         },
         {
           "id": "binary_sensor.garage_tor_links_battery_plus_low",
@@ -942,18 +947,8 @@
           "cSharpName": "GoogleDe"
         },
         {
-          "id": "binary_sensor.haustur",
-          "friendlyName": "Haust\u00FCr",
-          "cSharpName": "Haustur"
-        },
-        {
-          "id": "binary_sensor.haustur_batteriestand",
-          "friendlyName": "Haust\u00FCr Batteriestand",
-          "cSharpName": "HausturBatteriestand"
-        },
-        {
           "id": "binary_sensor.haustur_battery_plus_low",
-          "friendlyName": "Haust\u00FCr Akku fast leer",
+          "friendlyName": "Diele Haust\u00FCrschloss Akku fast leer",
           "cSharpName": "HausturBatteryPlusLow"
         },
         {
@@ -1013,43 +1008,48 @@
         },
         {
           "id": "binary_sensor.kuche_steckdose_geschirrspuler_overcurrent",
-          "friendlyName": "K\u00FCche Steckdose Geschirrsp\u00FCler Overcurrent",
+          "friendlyName": "K\u00FCche Steckdose Geschirrsp\u00FCler \u00DCberstrom",
           "cSharpName": "KucheSteckdoseGeschirrspulerOvercurrent"
         },
         {
           "id": "binary_sensor.kuche_steckdose_geschirrspuler_overheating",
-          "friendlyName": "K\u00FCche Steckdose Geschirrsp\u00FCler Overheating",
+          "friendlyName": "K\u00FCche Steckdose Geschirrsp\u00FCler \u00DCberhitzung",
           "cSharpName": "KucheSteckdoseGeschirrspulerOverheating"
         },
         {
           "id": "binary_sensor.kuche_steckdose_geschirrspuler_overpowering",
-          "friendlyName": "K\u00FCche Steckdose Geschirrsp\u00FCler Overpowering",
+          "friendlyName": "K\u00FCche Steckdose Geschirrsp\u00FCler \u00DCberlast",
           "cSharpName": "KucheSteckdoseGeschirrspulerOverpowering"
         },
         {
           "id": "binary_sensor.kuche_steckdose_geschirrspuler_overvoltage",
-          "friendlyName": "K\u00FCche Steckdose Geschirrsp\u00FCler Overvoltage",
+          "friendlyName": "K\u00FCche Steckdose Geschirrsp\u00FCler \u00DCberspannung",
           "cSharpName": "KucheSteckdoseGeschirrspulerOvervoltage"
         },
         {
           "id": "binary_sensor.kuche_steckdose_kaffeemaschine_overcurrent",
-          "friendlyName": "K\u00FCche Steckdose Kaffeemaschine Overcurrent",
+          "friendlyName": "K\u00FCche Steckdose Kaffeemaschine \u00DCberstrom",
           "cSharpName": "KucheSteckdoseKaffeemaschineOvercurrent"
         },
         {
           "id": "binary_sensor.kuche_steckdose_kaffeemaschine_overheating",
-          "friendlyName": "K\u00FCche Steckdose Kaffeemaschine Overheating",
+          "friendlyName": "K\u00FCche Steckdose Kaffeemaschine \u00DCberhitzung",
           "cSharpName": "KucheSteckdoseKaffeemaschineOverheating"
         },
         {
           "id": "binary_sensor.kuche_steckdose_kaffeemaschine_overpowering",
-          "friendlyName": "K\u00FCche Steckdose Kaffeemaschine Overpowering",
+          "friendlyName": "K\u00FCche Steckdose Kaffeemaschine \u00DCberlast",
           "cSharpName": "KucheSteckdoseKaffeemaschineOverpowering"
         },
         {
           "id": "binary_sensor.kuche_steckdose_kaffeemaschine_overvoltage",
-          "friendlyName": "K\u00FCche Steckdose Kaffeemaschine Overvoltage",
+          "friendlyName": "K\u00FCche Steckdose Kaffeemaschine \u00DCberspannung",
           "cSharpName": "KucheSteckdoseKaffeemaschineOvervoltage"
+        },
+        {
+          "id": "binary_sensor.prasenz_sensor_presence",
+          "friendlyName": "Pr\u00E4senz Sensor Belegung",
+          "cSharpName": "PrasenzSensorPresence"
         },
         {
           "id": "binary_sensor.schlafzimmer_fenster_batterie",
@@ -1073,22 +1073,22 @@
         },
         {
           "id": "binary_sensor.shelly_refigerator_overcurrent",
-          "friendlyName": "K\u00FCche Steckdose K\u00FChlschrank Overcurrent",
+          "friendlyName": "K\u00FCche Steckdose K\u00FChlschrank \u00DCberstrom",
           "cSharpName": "ShellyRefigeratorOvercurrent"
         },
         {
           "id": "binary_sensor.shelly_refigerator_overheating",
-          "friendlyName": "K\u00FCche Steckdose K\u00FChlschrank Overheating",
+          "friendlyName": "K\u00FCche Steckdose K\u00FChlschrank \u00DCberhitzung",
           "cSharpName": "ShellyRefigeratorOverheating"
         },
         {
           "id": "binary_sensor.shelly_refigerator_overpowering",
-          "friendlyName": "K\u00FCche Steckdose K\u00FChlschrank Overpowering",
+          "friendlyName": "K\u00FCche Steckdose K\u00FChlschrank \u00DCberlast",
           "cSharpName": "ShellyRefigeratorOverpowering"
         },
         {
           "id": "binary_sensor.shelly_refigerator_overvoltage",
-          "friendlyName": "K\u00FCche Steckdose K\u00FChlschrank Overvoltage",
+          "friendlyName": "K\u00FCche Steckdose K\u00FChlschrank \u00DCberspannung",
           "cSharpName": "ShellyRefigeratorOvervoltage"
         },
         {
@@ -1103,22 +1103,22 @@
         },
         {
           "id": "binary_sensor.speisekammer_steckdose_saugrobotor_overcurrent",
-          "friendlyName": "Speisekammer Steckdose Saugrobotor Overcurrent",
+          "friendlyName": "Speisekammer Steckdose Saugrobotor \u00DCberstrom",
           "cSharpName": "SpeisekammerSteckdoseSaugrobotorOvercurrent"
         },
         {
           "id": "binary_sensor.speisekammer_steckdose_saugrobotor_overheating",
-          "friendlyName": "Speisekammer Steckdose Saugrobotor Overheating",
+          "friendlyName": "Speisekammer Steckdose Saugrobotor \u00DCberhitzung",
           "cSharpName": "SpeisekammerSteckdoseSaugrobotorOverheating"
         },
         {
           "id": "binary_sensor.speisekammer_steckdose_saugrobotor_overpowering",
-          "friendlyName": "Speisekammer Steckdose Saugrobotor Overpowering",
+          "friendlyName": "Speisekammer Steckdose Saugrobotor \u00DCberlast",
           "cSharpName": "SpeisekammerSteckdoseSaugrobotorOverpowering"
         },
         {
           "id": "binary_sensor.speisekammer_steckdose_saugrobotor_overvoltage",
-          "friendlyName": "Speisekammer Steckdose Saugrobotor Overvoltage",
+          "friendlyName": "Speisekammer Steckdose Saugrobotor \u00DCberspannung",
           "cSharpName": "SpeisekammerSteckdoseSaugrobotorOvervoltage"
         },
         {
@@ -1178,22 +1178,22 @@
         },
         {
           "id": "binary_sensor.werkstatt_steckdose_server_pc_overcurrent",
-          "friendlyName": "Werkstatt Steckdose Server PC Overcurrent",
+          "friendlyName": "Werkstatt Steckdose Server PC \u00DCberstrom",
           "cSharpName": "WerkstattSteckdoseServerPcOvercurrent"
         },
         {
           "id": "binary_sensor.werkstatt_steckdose_server_pc_overheating",
-          "friendlyName": "Werkstatt Steckdose Server PC Overheating",
+          "friendlyName": "Werkstatt Steckdose Server PC \u00DCberhitzung",
           "cSharpName": "WerkstattSteckdoseServerPcOverheating"
         },
         {
           "id": "binary_sensor.werkstatt_steckdose_server_pc_overpowering",
-          "friendlyName": "Werkstatt Steckdose Server PC Overpowering",
+          "friendlyName": "Werkstatt Steckdose Server PC \u00DCberlast",
           "cSharpName": "WerkstattSteckdoseServerPcOverpowering"
         },
         {
           "id": "binary_sensor.werkstatt_steckdose_server_pc_overvoltage",
-          "friendlyName": "Werkstatt Steckdose Server PC Overvoltage",
+          "friendlyName": "Werkstatt Steckdose Server PC \u00DCberspannung",
           "cSharpName": "WerkstattSteckdoseServerPcOvervoltage"
         },
         {
@@ -1228,22 +1228,22 @@
         },
         {
           "id": "binary_sensor.wohnzimmer_steckdose_tv_overcurrent",
-          "friendlyName": "Wohnzimmer Steckdose TV Overcurrent",
+          "friendlyName": "Wohnzimmer Steckdose TV \u00DCberstrom",
           "cSharpName": "WohnzimmerSteckdoseTvOvercurrent"
         },
         {
           "id": "binary_sensor.wohnzimmer_steckdose_tv_overheating",
-          "friendlyName": "Wohnzimmer Steckdose TV Overheating",
+          "friendlyName": "Wohnzimmer Steckdose TV \u00DCberhitzung",
           "cSharpName": "WohnzimmerSteckdoseTvOverheating"
         },
         {
           "id": "binary_sensor.wohnzimmer_steckdose_tv_overpowering",
-          "friendlyName": "Wohnzimmer Steckdose TV Overpowering",
+          "friendlyName": "Wohnzimmer Steckdose TV \u00DCberlast",
           "cSharpName": "WohnzimmerSteckdoseTvOverpowering"
         },
         {
           "id": "binary_sensor.wohnzimmer_steckdose_tv_overvoltage",
-          "friendlyName": "Wohnzimmer Steckdose TV Overvoltage",
+          "friendlyName": "Wohnzimmer Steckdose TV \u00DCberspannung",
           "cSharpName": "WohnzimmerSteckdoseTvOvervoltage"
         },
         {
@@ -1440,12 +1440,12 @@
         },
         {
           "id": "button.buro_steckdose_schreibtisch_sabine_reboot",
-          "friendlyName": "B\u00FCro Steckdose Schreibtisch Sabine Restart",
+          "friendlyName": "B\u00FCro Steckdose Schreibtisch Sabine Neu starten",
           "cSharpName": "BuroSteckdoseSchreibtischSabineReboot"
         },
         {
           "id": "button.buro_steckdose_schreibtisch_thomas_reboot",
-          "friendlyName": "B\u00FCro Steckdose Schreibtisch Thomas Restart",
+          "friendlyName": "B\u00FCro Steckdose Schreibtisch Thomas Neu starten",
           "cSharpName": "BuroSteckdoseSchreibtischThomasReboot"
         },
         {
@@ -1465,7 +1465,7 @@
         },
         {
           "id": "button.diele_steckdose_smarthome_restart",
-          "friendlyName": "Diele Steckdose Smarthome Restart",
+          "friendlyName": "Diele Steckdose Smarthome Neu starten",
           "cSharpName": "DieleSteckdoseSmarthomeRestart"
         },
         {
@@ -1477,6 +1477,11 @@
           "id": "button.esszimmer_heizkorperthermostat_battery_replaced",
           "friendlyName": "Esszimmer Heizk\u00F6rperthermostat Batterie ersetzt",
           "cSharpName": "EsszimmerHeizkorperthermostatBatteryReplaced"
+        },
+        {
+          "id": "button.garage_klimasensor_battery_replaced",
+          "friendlyName": "Garage Klimasensor Batterie ersetzt",
+          "cSharpName": "GarageKlimasensorBatteryReplaced"
         },
         {
           "id": "button.garage_tor_links_battery_replaced",
@@ -1505,7 +1510,7 @@
         },
         {
           "id": "button.haustur_battery_replaced",
-          "friendlyName": "Haust\u00FCr Batterie ersetzt",
+          "friendlyName": "Diele Haust\u00FCrschloss Batterie ersetzt",
           "cSharpName": "HausturBatteryReplaced"
         },
         {
@@ -1530,18 +1535,13 @@
         },
         {
           "id": "button.kuche_steckdose_geschirrspuler_reboot",
-          "friendlyName": "K\u00FCche Steckdose Geschirrsp\u00FCler Restart",
+          "friendlyName": "K\u00FCche Steckdose Geschirrsp\u00FCler Neu starten",
           "cSharpName": "KucheSteckdoseGeschirrspulerReboot"
         },
         {
           "id": "button.kuche_steckdose_kaffeemaschine_reboot",
-          "friendlyName": "K\u00FCche Steckdose Kaffeemaschine Restart",
+          "friendlyName": "K\u00FCche Steckdose Kaffeemaschine Neu starten",
           "cSharpName": "KucheSteckdoseKaffeemaschineReboot"
-        },
-        {
-          "id": "button.lg_webos_tv_e275_identify",
-          "friendlyName": "LG webOS TV E275 Identify",
-          "cSharpName": "LgWebosTvE275Identify"
         },
         {
           "id": "button.pantry_robot_vacuum_cleaner_backup_map_1",
@@ -1670,7 +1670,7 @@
         },
         {
           "id": "button.shelly_refigerator_reboot",
-          "friendlyName": "K\u00FCche Steckdose K\u00FChlschrank Restart",
+          "friendlyName": "K\u00FCche Steckdose K\u00FChlschrank Neu starten",
           "cSharpName": "ShellyRefigeratorReboot"
         },
         {
@@ -1685,7 +1685,7 @@
         },
         {
           "id": "button.speisekammer_steckdose_saugrobotor_reboot",
-          "friendlyName": "Speisekammer Steckdose Saugrobotor Restart",
+          "friendlyName": "Speisekammer Steckdose Saugrobotor Neu starten",
           "cSharpName": "SpeisekammerSteckdoseSaugrobotorReboot"
         },
         {
@@ -1715,7 +1715,7 @@
         },
         {
           "id": "button.werkstatt_steckdose_server_pc_reboot",
-          "friendlyName": "Werkstatt Steckdose Server PC Restart",
+          "friendlyName": "Werkstatt Steckdose Server PC Neu starten",
           "cSharpName": "WerkstattSteckdoseServerPcReboot"
         },
         {
@@ -1740,7 +1740,7 @@
         },
         {
           "id": "button.wohnzimmer_steckdose_tv_reboot",
-          "friendlyName": "Wohnzimmer Steckdose TV Restart",
+          "friendlyName": "Wohnzimmer Steckdose TV Neu starten",
           "cSharpName": "WohnzimmerSteckdoseTvReboot"
         },
         {
@@ -2103,6 +2103,16 @@
           "jsonName": "selected",
           "cSharpName": "Selected",
           "clrType": "System.Boolean"
+        },
+        {
+          "jsonName": "startup_method",
+          "cSharpName": "StartupMethod",
+          "clrType": "System.String"
+        },
+        {
+          "jsonName": "dust_collection_count",
+          "cSharpName": "DustCollectionCount",
+          "clrType": "System.Double"
         }
       ]
     },
@@ -2385,7 +2395,7 @@
         },
         {
           "id": "device_tracker.smartwatch_thomas",
-          "friendlyName": "Smartwatch Thomas",
+          "friendlyName": "Xiaomi Watch 2 Pro",
           "cSharpName": "SmartwatchThomas"
         },
         {
@@ -2538,24 +2548,9 @@
       "domain": "input_boolean",
       "entities": [
         {
-          "id": "input_boolean.dev_netdaemon_app_model_hello_yaml_app",
-          "friendlyName": "dev_netdaemon_app_model_hello_yaml_app",
-          "cSharpName": "DevNetdaemonAppModelHelloYamlApp"
-        },
-        {
-          "id": "input_boolean.dev_netdaemon_extensions_scheduling_scheduling_app",
-          "friendlyName": "dev_netdaemon_extensions_scheduling_scheduling_app",
-          "cSharpName": "DevNetdaemonExtensionsSchedulingSchedulingApp"
-        },
-        {
-          "id": "input_boolean.dev_netdaemon_hass_model_hello_world_app",
-          "friendlyName": "dev_netdaemon_hass_model_hello_world_app",
-          "cSharpName": "DevNetdaemonHassModelHelloWorldApp"
-        },
-        {
-          "id": "input_boolean.dev_netdaemon_hass_model_light_on_movement",
-          "friendlyName": "dev_netdaemon_hass_model_light_on_movement",
-          "cSharpName": "DevNetdaemonHassModelLightOnMovement"
+          "id": "input_boolean.netdaemon_hass_model_light_on_movement",
+          "friendlyName": "netdaemon_hass_model_light_on_movement",
+          "cSharpName": "NetdaemonHassModelLightOnMovement"
         },
         {
           "id": "input_boolean.netdaemon_home_assistant_automations_apps_automations_lights_living_room_main_light_dimmer_automation",
@@ -2563,14 +2558,44 @@
           "cSharpName": "NetdaemonHomeAssistantAutomationsAppsAutomationsLightsLivingRoomMainLightDimmerAutomation"
         },
         {
-          "id": "input_boolean.netdaemon_home_assistant_automations_apps_automations_windows_window_open_warning_automation",
-          "friendlyName": "netdaemon_home_assistant_automations_apps_automations_windows_window_open_warning_automation",
-          "cSharpName": "NetdaemonHomeAssistantAutomationsAppsAutomationsWindowsWindowOpenWarningAutomation"
+          "id": "input_boolean.netdaemon_home_assistant_automations_apps_automations_windows_bathroom_window_open_warning_automation",
+          "friendlyName": "netdaemon_home_assistant_automations_apps_automations_windows_bathroom_window_open_warning_automation",
+          "cSharpName": "NetdaemonHomeAssistantAutomationsAppsAutomationsWindowsBathroomWindowOpenWarningAutomation"
+        },
+        {
+          "id": "input_boolean.netdaemon_home_assistant_automations_apps_automations_windows_bedroom_window_open_warning_automation",
+          "friendlyName": "netdaemon_home_assistant_automations_apps_automations_windows_bedroom_window_open_warning_automation",
+          "cSharpName": "NetdaemonHomeAssistantAutomationsAppsAutomationsWindowsBedroomWindowOpenWarningAutomation"
+        },
+        {
+          "id": "input_boolean.netdaemon_home_assistant_automations_apps_automations_windows_guestroom_window_open_warning_automation",
+          "friendlyName": "netdaemon_home_assistant_automations_apps_automations_windows_guestroom_window_open_warning_automation",
+          "cSharpName": "NetdaemonHomeAssistantAutomationsAppsAutomationsWindowsGuestroomWindowOpenWarningAutomation"
+        },
+        {
+          "id": "input_boolean.netdaemon_home_assistant_automations_apps_automations_windows_office_window_open_warning_automation",
+          "friendlyName": "netdaemon_home_assistant_automations_apps_automations_windows_office_window_open_warning_automation",
+          "cSharpName": "NetdaemonHomeAssistantAutomationsAppsAutomationsWindowsOfficeWindowOpenWarningAutomation"
+        },
+        {
+          "id": "input_boolean.netdaemon_home_assistant_automations_apps_automations_windows_terrace_door_open_warning_automation",
+          "friendlyName": "netdaemon_home_assistant_automations_apps_automations_windows_terrace_door_open_warning_automation",
+          "cSharpName": "NetdaemonHomeAssistantAutomationsAppsAutomationsWindowsTerraceDoorOpenWarningAutomation"
+        },
+        {
+          "id": "input_boolean.netdaemon_home_assistant_automations_apps_automations_windows_toilet_window_open_warning_automation",
+          "friendlyName": "netdaemon_home_assistant_automations_apps_automations_windows_toilet_window_open_warning_automation",
+          "cSharpName": "NetdaemonHomeAssistantAutomationsAppsAutomationsWindowsToiletWindowOpenWarningAutomation"
         },
         {
           "id": "input_boolean.terrassentuer_offen_warnung_stummgeschaltet",
           "friendlyName": "Terrassent\u00FCr Offen Warnung Stummgeschaltet",
           "cSharpName": "TerrassentuerOffenWarnungStummgeschaltet"
+        },
+        {
+          "id": "input_boolean.weihnachststerne",
+          "friendlyName": "Weihnachststerne",
+          "cSharpName": "Weihnachststerne"
         }
       ],
       "attributes": [
@@ -2582,6 +2607,11 @@
         {
           "jsonName": "friendly_name",
           "cSharpName": "FriendlyName",
+          "clrType": "System.String"
+        },
+        {
+          "jsonName": "icon",
+          "cSharpName": "Icon",
           "clrType": "System.String"
         }
       ]
@@ -2774,9 +2804,9 @@
       "domain": "lock",
       "entities": [
         {
-          "id": "lock.haustur",
-          "friendlyName": "Haust\u00FCr",
-          "cSharpName": "Haustur"
+          "id": "lock.diele_haustuerschloss_steuerung",
+          "friendlyName": "Diele Haust\u00FCrschloss Steuerung",
+          "cSharpName": "DieleHaustuerschlossSteuerung"
         }
       ],
       "attributes": [
@@ -2797,9 +2827,54 @@
       "isNumeric": true,
       "entities": [
         {
-          "id": "number.esszimmer_licht_esszimmertisch_delayed_power_on_time",
-          "friendlyName": "Esszimmer Licht Esszimmertisch Delayed power on time",
-          "cSharpName": "EsszimmerLichtEsszimmertischDelayedPowerOnTime"
+          "id": "number.esszimmer_leuchte_hauptlicht_delayed_power_on_time",
+          "friendlyName": "Esszimmer Leuchte Hauptlicht Delayed power on time",
+          "cSharpName": "EsszimmerLeuchteHauptlichtDelayedPowerOnTime"
+        },
+        {
+          "id": "number.esszimmer_steckdose_vitrine_countdown",
+          "friendlyName": "Esszimmer Steckdose Vitrine Countdown",
+          "cSharpName": "EsszimmerSteckdoseVitrineCountdown"
+        },
+        {
+          "id": "number.esszimmer_weihnachtsstern",
+          "friendlyName": "Esszimmer Weihnachtsstern",
+          "cSharpName": "EsszimmerWeihnachtsstern"
+        },
+        {
+          "id": "number.garage_klimasensor_comfort_humidity_max",
+          "friendlyName": "Garage Klimasensor Comfort humidity max",
+          "cSharpName": "GarageKlimasensorComfortHumidityMax"
+        },
+        {
+          "id": "number.garage_klimasensor_comfort_humidity_min",
+          "friendlyName": "Garage Klimasensor Comfort humidity min",
+          "cSharpName": "GarageKlimasensorComfortHumidityMin"
+        },
+        {
+          "id": "number.garage_klimasensor_comfort_temperature_max",
+          "friendlyName": "Garage Klimasensor Comfort temperature max",
+          "cSharpName": "GarageKlimasensorComfortTemperatureMax"
+        },
+        {
+          "id": "number.garage_klimasensor_comfort_temperature_min",
+          "friendlyName": "Garage Klimasensor Comfort temperature min",
+          "cSharpName": "GarageKlimasensorComfortTemperatureMin"
+        },
+        {
+          "id": "number.garage_klimasensor_humidity_calibration",
+          "friendlyName": "Garage Klimasensor Humidity calibration",
+          "cSharpName": "GarageKlimasensorHumidityCalibration"
+        },
+        {
+          "id": "number.garage_klimasensor_temperature_calibration",
+          "friendlyName": "Garage Klimasensor Temperature calibration",
+          "cSharpName": "GarageKlimasensorTemperatureCalibration"
+        },
+        {
+          "id": "number.garage_steckdose_mahroboter_countdown",
+          "friendlyName": "Garage Steckdose M\u00E4hroboter Countdown",
+          "cSharpName": "GarageSteckdoseMahroboterCountdown"
         },
         {
           "id": "number.garten_rasenmaherrobotor_auto_rotate_angle_interval",
@@ -2852,11 +2927,6 @@
           "cSharpName": "HeizungsraumSteckdoseZirkulationspumpe"
         },
         {
-          "id": "number.hm_lc_sw1_pl_dn_r1_peq1449284",
-          "friendlyName": "S4",
-          "cSharpName": "HmLcSw1PlDnR1Peq1449284"
-        },
-        {
           "id": "number.hm_lc_sw1_pl_dn_r1_peq1449293",
           "friendlyName": "S3",
           "cSharpName": "HmLcSw1PlDnR1Peq1449293"
@@ -2868,8 +2938,18 @@
         },
         {
           "id": "number.hm_lc_sw1_pl_dn_r1_peq1449461",
-          "friendlyName": "S2",
+          "friendlyName": "Wohnzimmer Weihnachtsstern",
           "cSharpName": "HmLcSw1PlDnR1Peq1449461"
+        },
+        {
+          "id": "number.kuche_steckdose_backofen_countdown",
+          "friendlyName": "K\u00FCche Steckdose Backofen Countdown",
+          "cSharpName": "KucheSteckdoseBackofenCountdown"
+        },
+        {
+          "id": "number.kuche_steckdose_mikrowelle_countdown",
+          "friendlyName": "K\u00FCche Steckdose Mikrowelle Countdown",
+          "cSharpName": "KucheSteckdoseMikrowelleCountdown"
         },
         {
           "id": "number.kueche_lautsprecher_balance",
@@ -2945,6 +3025,31 @@
           "id": "number.pantry_robot_vacuum_cleaner_wetness_level",
           "friendlyName": "Pantry Robot Vacuum Cleaner Wetness Level",
           "cSharpName": "PantryRobotVacuumCleanerWetnessLevel"
+        },
+        {
+          "id": "number.prasenz_sensor_fading_time",
+          "friendlyName": "Pr\u00E4senz Sensor Fading time",
+          "cSharpName": "PrasenzSensorFadingTime"
+        },
+        {
+          "id": "number.prasenz_sensor_motion_detection_sensitivity",
+          "friendlyName": "Pr\u00E4senz Sensor Motion detection sensitivity",
+          "cSharpName": "PrasenzSensorMotionDetectionSensitivity"
+        },
+        {
+          "id": "number.prasenz_sensor_static_detection_distance",
+          "friendlyName": "Pr\u00E4senz Sensor Static detection distance",
+          "cSharpName": "PrasenzSensorStaticDetectionDistance"
+        },
+        {
+          "id": "number.prasenz_sensor_static_detection_sensitivity",
+          "friendlyName": "Pr\u00E4senz Sensor Static detection sensitivity",
+          "cSharpName": "PrasenzSensorStaticDetectionSensitivity"
+        },
+        {
+          "id": "number.spielzimmer_leuchte_hauptlicht_delayed_power_on_time",
+          "friendlyName": "Spielzimmer Leuchte Hauptlicht Delayed power on time",
+          "cSharpName": "SpielzimmerLeuchteHauptlichtDelayedPowerOnTime"
         },
         {
           "id": "number.werkstatt_lautsprecher_balance",
@@ -3173,6 +3278,21 @@
           "cSharpName": "_0x0017880104063e5fEffect"
         },
         {
+          "id": "select.0x54ef4410012ee588_operation_mode_left",
+          "friendlyName": "0x54ef4410012ee588 Operation mode left",
+          "cSharpName": "_0x54ef4410012ee588OperationModeLeft"
+        },
+        {
+          "id": "select.0x54ef4410012ee588_operation_mode_right",
+          "friendlyName": "0x54ef4410012ee588 Operation mode right",
+          "cSharpName": "_0x54ef4410012ee588OperationModeRight"
+        },
+        {
+          "id": "select.0x54ef4410012ee588_power_on_behavior",
+          "friendlyName": "0x54ef4410012ee588 Power on behavior",
+          "cSharpName": "_0x54ef4410012ee588PowerOnBehavior"
+        },
+        {
           "id": "select.badezimmer_fenster",
           "friendlyName": "Badezimmer Fenster",
           "cSharpName": "BadezimmerFenster"
@@ -3193,14 +3313,14 @@
           "cSharpName": "DieleSchalterPrasenz"
         },
         {
-          "id": "select.esszimmer_licht_esszimmertisch_external_trigger_mode",
-          "friendlyName": "Esszimmer Licht Esszimmertisch External trigger mode",
-          "cSharpName": "EsszimmerLichtEsszimmertischExternalTriggerMode"
+          "id": "select.esszimmer_leuchte_hauptlicht_external_trigger_mode",
+          "friendlyName": "Esszimmer Leuchte Hauptlicht External trigger mode",
+          "cSharpName": "EsszimmerLeuchteHauptlichtExternalTriggerMode"
         },
         {
-          "id": "select.esszimmer_licht_esszimmertisch_power_on_behavior",
-          "friendlyName": "Esszimmer Licht Esszimmertisch Power-on behavior",
-          "cSharpName": "EsszimmerLichtEsszimmertischPowerOnBehavior"
+          "id": "select.esszimmer_leuchte_hauptlicht_power_on_behavior",
+          "friendlyName": "Esszimmer Leuchte Hauptlicht Power-on behavior",
+          "cSharpName": "EsszimmerLeuchteHauptlichtPowerOnBehavior"
         },
         {
           "id": "select.esszimmer_steckdose_vitrine_indicator_mode",
@@ -3211,6 +3331,26 @@
           "id": "select.esszimmer_steckdose_vitrine_power_outage_memory",
           "friendlyName": "Esszimmer Steckdose Vitrine Power outage memory",
           "cSharpName": "EsszimmerSteckdoseVitrinePowerOutageMemory"
+        },
+        {
+          "id": "select.esszimmer_weihnachtsstern",
+          "friendlyName": "Esszimmer Weihnachtsstern",
+          "cSharpName": "EsszimmerWeihnachtsstern"
+        },
+        {
+          "id": "select.garage_klimasensor_temperature_units",
+          "friendlyName": "Garage Klimasensor Temperature units",
+          "cSharpName": "GarageKlimasensorTemperatureUnits"
+        },
+        {
+          "id": "select.garage_steckdose_mahroboter_indicator_mode",
+          "friendlyName": "Garage Steckdose M\u00E4hroboter Indicator mode",
+          "cSharpName": "GarageSteckdoseMahroboterIndicatorMode"
+        },
+        {
+          "id": "select.garage_steckdose_mahroboter_power_outage_memory",
+          "friendlyName": "Garage Steckdose M\u00E4hroboter Power outage memory",
+          "cSharpName": "GarageSteckdoseMahroboterPowerOutageMemory"
         },
         {
           "id": "select.garten_rasenmaherrobotor_blade_speed_setting",
@@ -3268,11 +3408,6 @@
           "cSharpName": "HeizungsraumStromzahler"
         },
         {
-          "id": "select.hm_lc_sw1_pl_dn_r1_peq1449284",
-          "friendlyName": "S4",
-          "cSharpName": "HmLcSw1PlDnR1Peq1449284"
-        },
-        {
           "id": "select.hm_lc_sw1_pl_dn_r1_peq1449293",
           "friendlyName": "S3",
           "cSharpName": "HmLcSw1PlDnR1Peq1449293"
@@ -3284,8 +3419,13 @@
         },
         {
           "id": "select.hm_lc_sw1_pl_dn_r1_peq1449461",
-          "friendlyName": "S2",
+          "friendlyName": "Wohnzimmer Weihnachtsstern",
           "cSharpName": "HmLcSw1PlDnR1Peq1449461"
+        },
+        {
+          "id": "select.kuche_leuchte_hauptlicht_power_on_behavior",
+          "friendlyName": "K\u00FCche Leuchte Hauptlicht Power-on behavior",
+          "cSharpName": "KucheLeuchteHauptlichtPowerOnBehavior"
         },
         {
           "id": "select.kuche_steckdose_backofen_indicator_mode",
@@ -3748,9 +3888,34 @@
           "cSharpName": "PantryRobotVacuumCleanerWaterTemperature"
         },
         {
+          "id": "select.prasenz_sensor_motion_detection_mode",
+          "friendlyName": "Pr\u00E4senz Sensor Motion detection mode",
+          "cSharpName": "PrasenzSensorMotionDetectionMode"
+        },
+        {
           "id": "select.schlafzimmer_fenster",
           "friendlyName": "Schlafzimmer Fenster",
           "cSharpName": "SchlafzimmerFenster"
+        },
+        {
+          "id": "select.spielzimmer_leuchte_hauptlicht_external_trigger_mode",
+          "friendlyName": "Spielzimmer Leuchte Hauptlicht External trigger mode",
+          "cSharpName": "SpielzimmerLeuchteHauptlichtExternalTriggerMode"
+        },
+        {
+          "id": "select.spielzimmer_leuchte_hauptlicht_power_on_behavior",
+          "friendlyName": "Spielzimmer Leuchte Hauptlicht Power-on behavior",
+          "cSharpName": "SpielzimmerLeuchteHauptlichtPowerOnBehavior"
+        },
+        {
+          "id": "select.spielzimmer_steckdose_pc_power_outage_memory",
+          "friendlyName": "Spielzimmer Steckdose PC Power outage memory",
+          "cSharpName": "SpielzimmerSteckdosePcPowerOutageMemory"
+        },
+        {
+          "id": "select.spielzimmer_steckdose_pc_switch_type",
+          "friendlyName": "Spielzimmer Steckdose PC Switch type",
+          "cSharpName": "SpielzimmerSteckdosePcSwitchType"
         },
         {
           "id": "select.wc_fenster",
@@ -3758,9 +3923,9 @@
           "cSharpName": "WcFenster"
         },
         {
-          "id": "select.wohnzimmer_leuchte_deckenleuchte_power_on_behavior",
-          "friendlyName": "Wohnzimmer Leuchte Deckenleuchte Power-on behavior",
-          "cSharpName": "WohnzimmerLeuchteDeckenleuchtePowerOnBehavior"
+          "id": "select.wohnzimmer_leuchte_hauptlicht_power_on_behavior",
+          "friendlyName": "Wohnzimmer Leuchte Hauptlicht Power-on behavior",
+          "cSharpName": "WohnzimmerLeuchteHauptlichtPowerOnBehavior"
         },
         {
           "id": "select.wohnzimmer_licht_tv_lowboard_power_on_behavior",
@@ -3884,6 +4049,11 @@
     {
       "domain": "sensor",
       "entities": [
+        {
+          "id": "sensor.0x54ef4410012ee588_action",
+          "friendlyName": "0x54ef4410012ee588 Action",
+          "cSharpName": "_0x54ef4410012ee588Action"
+        },
         {
           "id": "sensor.abfall_naechste_abholung",
           "friendlyName": "Abfall N\u00E4chste Abholung",
@@ -4080,9 +4250,19 @@
           "cSharpName": "EsszimmerHeizkorperthermostatBatteryType"
         },
         {
-          "id": "sensor.esszimmer_licht_esszimmertisch_action",
-          "friendlyName": "Esszimmer Licht Esszimmertisch Action",
-          "cSharpName": "EsszimmerLichtEsszimmertischAction"
+          "id": "sensor.esszimmer_leuchte_hauptlicht_action",
+          "friendlyName": "Esszimmer Leuchte Hauptlicht Action",
+          "cSharpName": "EsszimmerLeuchteHauptlichtAction"
+        },
+        {
+          "id": "sensor.garage_klimasensor_battery_last_replaced",
+          "friendlyName": "Garage Klimasensor Batterie zuletzt ersetzt",
+          "cSharpName": "GarageKlimasensorBatteryLastReplaced"
+        },
+        {
+          "id": "sensor.garage_klimasensor_battery_type",
+          "friendlyName": "Garage Klimasensor Batterieart",
+          "cSharpName": "GarageKlimasensorBatteryType"
         },
         {
           "id": "sensor.garage_tor_links_battery_last_replaced",
@@ -4176,12 +4356,12 @@
         },
         {
           "id": "sensor.haustur_battery_last_replaced",
-          "friendlyName": "Haust\u00FCr Batterie zuletzt ersetzt",
+          "friendlyName": "Diele Haust\u00FCrschloss Batterie zuletzt ersetzt",
           "cSharpName": "HausturBatteryLastReplaced"
         },
         {
           "id": "sensor.haustur_battery_type",
-          "friendlyName": "Haust\u00FCr Batterieart",
+          "friendlyName": "Diele Haust\u00FCrschloss Batterieart",
           "cSharpName": "HausturBatteryType"
         },
         {
@@ -4345,6 +4525,11 @@
           "cSharpName": "PantryRobotVacuumCleanerTaskType"
         },
         {
+          "id": "sensor.prasenz_sensor_motion_state",
+          "friendlyName": "Pr\u00E4senz Sensor Motion state",
+          "cSharpName": "PrasenzSensorMotionState"
+        },
+        {
           "id": "sensor.schlafzimmer_fenster_battery_last_replaced",
           "friendlyName": "Schlafzimmer Fenster Batterie zuletzt ersetzt",
           "cSharpName": "SchlafzimmerFensterBatteryLastReplaced"
@@ -4425,16 +4610,6 @@
           "cSharpName": "SmartphoneThomasGeocodedLocation"
         },
         {
-          "id": "sensor.smartwatch_thomas_battery_state",
-          "friendlyName": "Smartwatch Thomas Battery state",
-          "cSharpName": "SmartwatchThomasBatteryState"
-        },
-        {
-          "id": "sensor.smartwatch_thomas_charger_type",
-          "friendlyName": "Smartwatch Thomas Charger type",
-          "cSharpName": "SmartwatchThomasChargerType"
-        },
-        {
           "id": "sensor.spielzimmer_heizkorperthermostat_battery_last_replaced",
           "friendlyName": "Spielzimmer Heizk\u00F6rperthermostat Batterie zuletzt ersetzt",
           "cSharpName": "SpielzimmerHeizkorperthermostatBatteryLastReplaced"
@@ -4443,6 +4618,11 @@
           "id": "sensor.spielzimmer_heizkorperthermostat_battery_type",
           "friendlyName": "Spielzimmer Heizk\u00F6rperthermostat Batterieart",
           "cSharpName": "SpielzimmerHeizkorperthermostatBatteryType"
+        },
+        {
+          "id": "sensor.spielzimmer_leuchte_hauptlicht_action",
+          "friendlyName": "Spielzimmer Leuchte Hauptlicht Action",
+          "cSharpName": "SpielzimmerLeuchteHauptlichtAction"
         },
         {
           "id": "sensor.spielzimmer_wandthermostat_battery_last_replaced",
@@ -4608,6 +4788,16 @@
           "id": "sensor.wohnzimmer_wandthermostat_battery_type",
           "friendlyName": "Wohnzimmer Wandthermostat Batterieart",
           "cSharpName": "WohnzimmerWandthermostatBatteryType"
+        },
+        {
+          "id": "sensor.xiaomi_watch_2_pro_battery_state",
+          "friendlyName": "Xiaomi Watch 2 Pro Battery state",
+          "cSharpName": "XiaomiWatch2ProBatteryState"
+        },
+        {
+          "id": "sensor.xiaomi_watch_2_pro_charger_type",
+          "friendlyName": "Xiaomi Watch 2 Pro Charger type",
+          "cSharpName": "XiaomiWatch2ProChargerType"
         },
         {
           "id": "sensor.zigbee2mqtt_bridge_version",
@@ -5555,6 +5745,31 @@
           "jsonName": "10-12 14:25",
           "cSharpName": "_10121425",
           "clrType": "System.Object"
+        },
+        {
+          "jsonName": "12-07 13:22",
+          "cSharpName": "_12071322",
+          "clrType": "System.Object"
+        },
+        {
+          "jsonName": "12-04 16:42",
+          "cSharpName": "_12041642",
+          "clrType": "System.Object"
+        },
+        {
+          "jsonName": "12-02 09:33",
+          "cSharpName": "_12020933",
+          "clrType": "System.Object"
+        },
+        {
+          "jsonName": "11-29 14:47",
+          "cSharpName": "_11291447",
+          "clrType": "System.Object"
+        },
+        {
+          "jsonName": "11-27 11:03",
+          "cSharpName": "_11271103",
+          "clrType": "System.Object"
         }
       ]
     },
@@ -5563,9 +5778,29 @@
       "isNumeric": true,
       "entities": [
         {
-          "id": "sensor.badezimmer_fenster_battery",
+          "id": "sensor.0x54ef4410012ee588_current",
+          "friendlyName": "0x54ef4410012ee588 Stromst\u00E4rke",
+          "cSharpName": "_0x54ef4410012ee588Current"
+        },
+        {
+          "id": "sensor.0x54ef4410012ee588_device_temperature",
+          "friendlyName": "0x54ef4410012ee588 Temperatur",
+          "cSharpName": "_0x54ef4410012ee588DeviceTemperature"
+        },
+        {
+          "id": "sensor.0x54ef4410012ee588_energy",
+          "friendlyName": "0x54ef4410012ee588 Energie",
+          "cSharpName": "_0x54ef4410012ee588Energy"
+        },
+        {
+          "id": "sensor.0x54ef4410012ee588_power",
+          "friendlyName": "0x54ef4410012ee588 Leistung",
+          "cSharpName": "_0x54ef4410012ee588Power"
+        },
+        {
+          "id": "sensor.badezimmer_fenster_batterie",
           "friendlyName": "Badezimmer Fenster Batterie",
-          "cSharpName": "BadezimmerFensterBattery"
+          "cSharpName": "BadezimmerFensterBatterie"
         },
         {
           "id": "sensor.badezimmer_fenster_battery_plus",
@@ -5733,6 +5968,11 @@
           "cSharpName": "DawarichThomasTotalReverseGeocodedPoints"
         },
         {
+          "id": "sensor.diele_hausturschloss_batterie",
+          "friendlyName": "Diele Haust\u00FCrschloss Batterie",
+          "cSharpName": "DieleHausturschlossBatterie"
+        },
+        {
           "id": "sensor.diele_steckdose_smarthome_energie",
           "friendlyName": "Diele Steckdose Smarthome Energie",
           "cSharpName": "DieleSteckdoseSmarthomeEnergie"
@@ -5786,6 +6026,46 @@
           "id": "sensor.gaestezimmer_wandthermostat_temperatur",
           "friendlyName": "G\u00E4stezimmer Wandthermostat Temperatur",
           "cSharpName": "GaestezimmerWandthermostatTemperatur"
+        },
+        {
+          "id": "sensor.garage_klimasensor_batterie",
+          "friendlyName": "Garage Klimasensor Batterie",
+          "cSharpName": "GarageKlimasensorBatterie"
+        },
+        {
+          "id": "sensor.garage_klimasensor_battery_plus",
+          "friendlyName": "Garage Klimasensor Batterie\u002B",
+          "cSharpName": "GarageKlimasensorBatteryPlus"
+        },
+        {
+          "id": "sensor.garage_klimasensor_luftfeuchtigkeit",
+          "friendlyName": "Garage Klimasensor Luftfeuchtigkeit",
+          "cSharpName": "GarageKlimasensorLuftfeuchtigkeit"
+        },
+        {
+          "id": "sensor.garage_klimasensor_temperatur",
+          "friendlyName": "Garage Klimasensor Temperatur",
+          "cSharpName": "GarageKlimasensorTemperatur"
+        },
+        {
+          "id": "sensor.garage_steckdose_maehroboter_energie",
+          "friendlyName": "Garage Steckdose M\u00E4hroboter Energie",
+          "cSharpName": "GarageSteckdoseMaehroboterEnergie"
+        },
+        {
+          "id": "sensor.garage_steckdose_maehroboter_leistung",
+          "friendlyName": "Garage Steckdose M\u00E4hroboter Leistung",
+          "cSharpName": "GarageSteckdoseMaehroboterLeistung"
+        },
+        {
+          "id": "sensor.garage_steckdose_maehroboter_spannung",
+          "friendlyName": "Garage Steckdose M\u00E4hroboter Spannung",
+          "cSharpName": "GarageSteckdoseMaehroboterSpannung"
+        },
+        {
+          "id": "sensor.garage_steckdose_maehroboter_stromstaerke",
+          "friendlyName": "Garage Steckdose M\u00E4hroboter Stromst\u00E4rke",
+          "cSharpName": "GarageSteckdoseMaehroboterStromstaerke"
         },
         {
           "id": "sensor.garage_tor_links_battery",
@@ -5883,13 +6163,8 @@
           "cSharpName": "GastezimmerWandthermostatTemperatur"
         },
         {
-          "id": "sensor.haustur_batterie",
-          "friendlyName": "Haust\u00FCr Batterie",
-          "cSharpName": "HausturBatterie"
-        },
-        {
           "id": "sensor.haustur_battery_plus",
-          "friendlyName": "Haust\u00FCr Batterie\u002B",
+          "friendlyName": "Diele Haust\u00FCrschloss Batterie\u002B",
           "cSharpName": "HausturBatteryPlus"
         },
         {
@@ -6193,6 +6468,16 @@
           "cSharpName": "PantryRobotVacuumCleanerWheelDirtyTimeLeft"
         },
         {
+          "id": "sensor.prasenz_sensor_battery",
+          "friendlyName": "Pr\u00E4senz Sensor Batterie",
+          "cSharpName": "PrasenzSensorBattery"
+        },
+        {
+          "id": "sensor.prasenz_sensor_illuminance",
+          "friendlyName": "Pr\u00E4senz Sensor Beleuchtungsst\u00E4rke",
+          "cSharpName": "PrasenzSensorIlluminance"
+        },
+        {
           "id": "sensor.slzb_mr1_zigbee_matter_hub_core_chip_temperatur",
           "friendlyName": "SLZB-MR1 (Zigbee/Thread Hub) Core-Chip-Temperatur",
           "cSharpName": "SlzbMr1ZigbeeMatterHubCoreChipTemperatur"
@@ -6218,11 +6503,6 @@
           "cSharpName": "SmartphoneThomasBatteryLevel"
         },
         {
-          "id": "sensor.smartwatch_thomas_battery_level",
-          "friendlyName": "Smartwatch Thomas Battery level",
-          "cSharpName": "SmartwatchThomasBatteryLevel"
-        },
-        {
           "id": "sensor.speisekammer_steckdose_saugrobotor_energie",
           "friendlyName": "Speisekammer Steckdose Saugrobotor Energie",
           "cSharpName": "SpeisekammerSteckdoseSaugrobotorEnergie"
@@ -6236,6 +6516,26 @@
           "id": "sensor.spielzimmer_heizkoerperthermostat_ventilstellung",
           "friendlyName": "Spielzimmer Heizk\u00F6rperthermostat Ventilstellung",
           "cSharpName": "SpielzimmerHeizkoerperthermostatVentilstellung"
+        },
+        {
+          "id": "sensor.spielzimmer_steckdose_pc_energie",
+          "friendlyName": "Spielzimmer Steckdose PC Energie",
+          "cSharpName": "SpielzimmerSteckdosePcEnergie"
+        },
+        {
+          "id": "sensor.spielzimmer_steckdose_pc_leistung",
+          "friendlyName": "Spielzimmer Steckdose PC Leistung",
+          "cSharpName": "SpielzimmerSteckdosePcLeistung"
+        },
+        {
+          "id": "sensor.spielzimmer_steckdose_pc_spannung",
+          "friendlyName": "Spielzimmer Steckdose PC Spannung",
+          "cSharpName": "SpielzimmerSteckdosePcSpannung"
+        },
+        {
+          "id": "sensor.spielzimmer_steckdose_pc_strom",
+          "friendlyName": "Spielzimmer Steckdose PC Stromst\u00E4rke",
+          "cSharpName": "SpielzimmerSteckdosePcStrom"
         },
         {
           "id": "sensor.spielzimmer_wandthermostat_luftfeuchtigkeit",
@@ -6481,6 +6781,11 @@
           "id": "sensor.wohnzimmer_wandthermostat_temperatur",
           "friendlyName": "Wohnzimmer Wandthermostat Temperatur",
           "cSharpName": "WohnzimmerWandthermostatTemperatur"
+        },
+        {
+          "id": "sensor.xiaomi_watch_2_pro_battery_level",
+          "friendlyName": "Xiaomi Watch 2 Pro Battery level",
+          "cSharpName": "XiaomiWatch2ProBatteryLevel"
         },
         {
           "id": "sensor.zuhause_entfernung_des_nachstgelegenen",
@@ -6834,6 +7139,46 @@
       "domain": "switch",
       "entities": [
         {
+          "id": "switch.0x54ef4410012ee588_flip_indicator_light",
+          "friendlyName": "0x54ef4410012ee588 Flip indicator light",
+          "cSharpName": "_0x54ef4410012ee588FlipIndicatorLight"
+        },
+        {
+          "id": "switch.0x54ef4410012ee588_led_indicator",
+          "friendlyName": "0x54ef4410012ee588 Led indicator",
+          "cSharpName": "_0x54ef4410012ee588LedIndicator"
+        },
+        {
+          "id": "switch.0x54ef4410012ee588_left",
+          "friendlyName": "0x54ef4410012ee588 Left",
+          "cSharpName": "_0x54ef4410012ee588Left"
+        },
+        {
+          "id": "switch.0x54ef4410012ee588_lock_relay_left",
+          "friendlyName": "0x54ef4410012ee588 Lock relay left",
+          "cSharpName": "_0x54ef4410012ee588LockRelayLeft"
+        },
+        {
+          "id": "switch.0x54ef4410012ee588_lock_relay_right",
+          "friendlyName": "0x54ef4410012ee588 Lock relay right",
+          "cSharpName": "_0x54ef4410012ee588LockRelayRight"
+        },
+        {
+          "id": "switch.0x54ef4410012ee588_multi_click_left_down",
+          "friendlyName": "0x54ef4410012ee588 Multi click left_down",
+          "cSharpName": "_0x54ef4410012ee588MultiClickLeftDown"
+        },
+        {
+          "id": "switch.0x54ef4410012ee588_multi_click_right_down",
+          "friendlyName": "0x54ef4410012ee588 Multi click right_down",
+          "cSharpName": "_0x54ef4410012ee588MultiClickRightDown"
+        },
+        {
+          "id": "switch.0x54ef4410012ee588_right",
+          "friendlyName": "0x54ef4410012ee588 Right",
+          "cSharpName": "_0x54ef4410012ee588Right"
+        },
+        {
           "id": "switch.battery_notes_pre_release",
           "friendlyName": "Battery Notes Pre-release",
           "cSharpName": "BatteryNotesPreRelease"
@@ -6859,29 +7204,29 @@
           "cSharpName": "DieleSteckdoseSmarthomeSteuerung"
         },
         {
-          "id": "switch.esszimmer_licht_esszimmertisch",
-          "friendlyName": "Esszimmer Licht Esszimmertisch Steuerung",
-          "cSharpName": "EsszimmerLichtEsszimmertisch"
+          "id": "switch.esszimmer_leuchte_hauptlicht_delayed_power_on_state",
+          "friendlyName": "Esszimmer Leuchte Hauptlicht Delayed power on state",
+          "cSharpName": "EsszimmerLeuchteHauptlichtDelayedPowerOnState"
         },
         {
-          "id": "switch.esszimmer_licht_esszimmertisch_delayed_power_on_state",
-          "friendlyName": "Esszimmer Licht Esszimmertisch Delayed power on state",
-          "cSharpName": "EsszimmerLichtEsszimmertischDelayedPowerOnState"
+          "id": "switch.esszimmer_leuchte_hauptlicht_detach_relay_mode",
+          "friendlyName": "Esszimmer Leuchte Hauptlicht Detach relay mode",
+          "cSharpName": "EsszimmerLeuchteHauptlichtDetachRelayMode"
         },
         {
-          "id": "switch.esszimmer_licht_esszimmertisch_detach_relay_mode",
-          "friendlyName": "Esszimmer Licht Esszimmertisch Detach relay mode",
-          "cSharpName": "EsszimmerLichtEsszimmertischDetachRelayMode"
+          "id": "switch.esszimmer_leuchte_hauptlicht_network_indicator",
+          "friendlyName": "Esszimmer Leuchte Hauptlicht Network indicator",
+          "cSharpName": "EsszimmerLeuchteHauptlichtNetworkIndicator"
         },
         {
-          "id": "switch.esszimmer_licht_esszimmertisch_network_indicator",
-          "friendlyName": "Esszimmer Licht Esszimmertisch Network indicator",
-          "cSharpName": "EsszimmerLichtEsszimmertischNetworkIndicator"
+          "id": "switch.esszimmer_leuchte_hauptlicht_steuerung",
+          "friendlyName": "Esszimmer Leuchte Hauptlicht",
+          "cSharpName": "EsszimmerLeuchteHauptlichtSteuerung"
         },
         {
-          "id": "switch.esszimmer_licht_esszimmertisch_turbo_mode",
-          "friendlyName": "Esszimmer Licht Esszimmertisch Turbo mode",
-          "cSharpName": "EsszimmerLichtEsszimmertischTurboMode"
+          "id": "switch.esszimmer_leuchte_hauptlicht_turbo_mode",
+          "friendlyName": "Esszimmer Leuchte Hauptlicht Turbo mode",
+          "cSharpName": "EsszimmerLeuchteHauptlichtTurboMode"
         },
         {
           "id": "switch.esszimmer_steckdose_vitrine",
@@ -6892,6 +7237,21 @@
           "id": "switch.esszimmer_steckdose_vitrine_child_lock",
           "friendlyName": "Esszimmer Steckdose Vitrine Child lock",
           "cSharpName": "EsszimmerSteckdoseVitrineChildLock"
+        },
+        {
+          "id": "switch.esszimmer_weihnachtsstern_steierung",
+          "friendlyName": "Esszimmer Weihnachtsstern Steuerung",
+          "cSharpName": "EsszimmerWeihnachtssternSteierung"
+        },
+        {
+          "id": "switch.garage_steckdose_maehroboter_steuerung",
+          "friendlyName": "Garage Steckdose M\u00E4hroboter Steuerung",
+          "cSharpName": "GarageSteckdoseMaehroboterSteuerung"
+        },
+        {
+          "id": "switch.garage_steckdose_mahroboter_child_lock",
+          "friendlyName": "Garage Steckdose M\u00E4hroboter Child lock",
+          "cSharpName": "GarageSteckdoseMahroboterChildLock"
         },
         {
           "id": "switch.heizungsraum_steckdose_trockner_steuerung",
@@ -6909,11 +7269,6 @@
           "cSharpName": "HeizungsraumSteckdoseZirkulationspumpeSteuerung"
         },
         {
-          "id": "switch.hm_lc_sw1_pl_dn_r1_peq1449284",
-          "friendlyName": "S4",
-          "cSharpName": "HmLcSw1PlDnR1Peq1449284"
-        },
-        {
           "id": "switch.hm_lc_sw1_pl_dn_r1_peq1449293",
           "friendlyName": "S3",
           "cSharpName": "HmLcSw1PlDnR1Peq1449293"
@@ -6922,11 +7277,6 @@
           "id": "switch.hm_lc_sw1_pl_dn_r1_peq1449354",
           "friendlyName": "S5",
           "cSharpName": "HmLcSw1PlDnR1Peq1449354"
-        },
-        {
-          "id": "switch.hm_lc_sw1_pl_dn_r1_peq1449461",
-          "friendlyName": "S2",
-          "cSharpName": "HmLcSw1PlDnR1Peq1449461"
         },
         {
           "id": "switch.kuche_steckdose_backofen",
@@ -6972,11 +7322,6 @@
           "id": "switch.kueche_steckdose_kuehlschrank_steuerung",
           "friendlyName": "K\u00FCche Steckdose K\u00FChlschrank Steuerung",
           "cSharpName": "KuecheSteckdoseKuehlschrankSteuerung"
-        },
-        {
-          "id": "switch.lg_webos_tv_e275_mute",
-          "friendlyName": "LG webOS TV E275 Mute",
-          "cSharpName": "LgWebosTvE275Mute"
         },
         {
           "id": "switch.pantry_robot_vacuum_cleaner_ai_fluid_detection",
@@ -7224,6 +7569,11 @@
           "cSharpName": "PantryRobotVacuumCleanerVoiceAssistant"
         },
         {
+          "id": "switch.prasenz_sensor_indicator",
+          "friendlyName": "Pr\u00E4senz Sensor Indicator",
+          "cSharpName": "PrasenzSensorIndicator"
+        },
+        {
           "id": "switch.slzb_mr1_zigbee_matter_hub_led_nachtmodus",
           "friendlyName": "SLZB-MR1 (Zigbee/Thread Hub) LED-Nachtmodus",
           "cSharpName": "SlzbMr1ZigbeeMatterHubLedNachtmodus"
@@ -7237,6 +7587,36 @@
           "id": "switch.speisekammer_steckdose_saugrobotor_steuerung",
           "friendlyName": "Speisekammer Steckdose Saugrobotor Steuerung",
           "cSharpName": "SpeisekammerSteckdoseSaugrobotorSteuerung"
+        },
+        {
+          "id": "switch.spielzimmer_leuchte_hauptlicht_delayed_power_on_state",
+          "friendlyName": "Spielzimmer Leuchte Hauptlicht Delayed power on state",
+          "cSharpName": "SpielzimmerLeuchteHauptlichtDelayedPowerOnState"
+        },
+        {
+          "id": "switch.spielzimmer_leuchte_hauptlicht_detach_relay_mode",
+          "friendlyName": "Spielzimmer Leuchte Hauptlicht Detach relay mode",
+          "cSharpName": "SpielzimmerLeuchteHauptlichtDetachRelayMode"
+        },
+        {
+          "id": "switch.spielzimmer_leuchte_hauptlicht_network_indicator",
+          "friendlyName": "Spielzimmer Leuchte Hauptlicht Network indicator",
+          "cSharpName": "SpielzimmerLeuchteHauptlichtNetworkIndicator"
+        },
+        {
+          "id": "switch.spielzimmer_leuchte_hauptlicht_steuerung",
+          "friendlyName": "Spielzimmer Leuchte Hauptlicht",
+          "cSharpName": "SpielzimmerLeuchteHauptlichtSteuerung"
+        },
+        {
+          "id": "switch.spielzimmer_leuchte_hauptlicht_turbo_mode",
+          "friendlyName": "Spielzimmer Leuchte Hauptlicht Turbo mode",
+          "cSharpName": "SpielzimmerLeuchteHauptlichtTurboMode"
+        },
+        {
+          "id": "switch.spielzimmer_steckdose_pc_steuerung",
+          "friendlyName": "Spielzimmer Steckdose PC",
+          "cSharpName": "SpielzimmerSteckdosePcSteuerung"
         },
         {
           "id": "switch.werkstatt_lautsprecher_loudness",
@@ -7262,6 +7642,11 @@
           "id": "switch.wohnzimmer_steckdose_tv_steuerung",
           "friendlyName": "Wohnzimmer Steckdose TV Steuerung",
           "cSharpName": "WohnzimmerSteckdoseTvSteuerung"
+        },
+        {
+          "id": "switch.wohnzimmer_weihnachtsstern_steuerung",
+          "friendlyName": "Wohnzimmer Weihnachtsstern Steuerung",
+          "cSharpName": "WohnzimmerWeihnachtssternSteuerung"
         },
         {
           "id": "switch.workshop_speaker_weekdays_alarm_06_50",
@@ -7499,6 +7884,11 @@
       "domain": "update",
       "entities": [
         {
+          "id": "update.0x54ef4410012ee588",
+          "friendlyName": "0x54ef4410012ee588",
+          "cSharpName": "_0x54ef4410012ee588"
+        },
+        {
           "id": "update.advanced_ssh_web_terminal_update",
           "friendlyName": "Advanced SSH \u0026 Web Terminal Update",
           "cSharpName": "AdvancedSshWebTerminalUpdate"
@@ -7579,14 +7969,29 @@
           "cSharpName": "DreameVacuumUpdate"
         },
         {
-          "id": "update.esszimmer_licht_esszimmertisch",
-          "friendlyName": "Esszimmer Licht Esszimmertisch",
-          "cSharpName": "EsszimmerLichtEsszimmertisch"
+          "id": "update.esszimmer_leuchte_hauptlicht",
+          "friendlyName": "Esszimmer Leuchte Hauptlicht",
+          "cSharpName": "EsszimmerLeuchteHauptlicht"
         },
         {
           "id": "update.esszimmer_steckdose_vitrine",
           "friendlyName": "Esszimmer Steckdose Vitrine",
           "cSharpName": "EsszimmerSteckdoseVitrine"
+        },
+        {
+          "id": "update.garage_klimasensor",
+          "friendlyName": "Garage Klimasensor",
+          "cSharpName": "GarageKlimasensor"
+        },
+        {
+          "id": "update.garage_steckdose_mahroboter",
+          "friendlyName": "Garage Steckdose M\u00E4hroboter",
+          "cSharpName": "GarageSteckdoseMahroboter"
+        },
+        {
+          "id": "update.git_pull_update",
+          "friendlyName": "Git pull Update",
+          "cSharpName": "GitPullUpdate"
         },
         {
           "id": "update.hacs_update",
@@ -7612,6 +8017,11 @@
           "id": "update.homematic_ip_local_update",
           "friendlyName": "Homematic(IP) Local update",
           "cSharpName": "HomematicIpLocalUpdate"
+        },
+        {
+          "id": "update.kuche_leuchte_hauptlicht",
+          "friendlyName": "K\u00FCche Leuchte Hauptlicht",
+          "cSharpName": "KucheLeuchteHauptlicht"
         },
         {
           "id": "update.kuche_steckdose_backofen",
@@ -7734,6 +8144,16 @@
           "cSharpName": "SpeisekammerSteckdoseSaugrobotorFirmware"
         },
         {
+          "id": "update.spielzimmer_leuchte_hauptlicht",
+          "friendlyName": "Spielzimmer Leuchte Hauptlicht",
+          "cSharpName": "SpielzimmerLeuchteHauptlicht"
+        },
+        {
+          "id": "update.spielzimmer_steckdose_pc",
+          "friendlyName": "Spielzimmer Steckdose PC",
+          "cSharpName": "SpielzimmerSteckdosePc"
+        },
+        {
           "id": "update.studio_code_server_update",
           "friendlyName": "Studio Code Server Update",
           "cSharpName": "StudioCodeServerUpdate"
@@ -7769,9 +8189,9 @@
           "cSharpName": "WohnzimmerDimmerDeckenleuchte"
         },
         {
-          "id": "update.wohnzimmer_leuchte_deckenleuchte",
-          "friendlyName": "Wohnzimmer Leuchte Deckenleuchte",
-          "cSharpName": "WohnzimmerLeuchteDeckenleuchte"
+          "id": "update.wohnzimmer_leuchte_hauptlicht",
+          "friendlyName": "Wohnzimmer Leuchte Hauptlicht",
+          "cSharpName": "WohnzimmerLeuchteHauptlicht"
         },
         {
           "id": "update.wohnzimmer_licht_tv_lowboard",
