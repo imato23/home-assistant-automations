@@ -43,7 +43,7 @@ namespace HomeAssistantAutomations.apps.Automations.Lights
                 action,
                 "Wohnzimmer Deckenleuchte");
 
-            LightEntity light = _entities.Light.WohnzimmerLeuchteDeckenleuchte;
+            LightEntity light = _entities.Light.WohnzimmerLeuchteHauptlichtSteuerung;
 
             switch (action)
             {
