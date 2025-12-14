@@ -191,6 +191,44 @@ public class NotificationService : INotificationService
     }
   }
 
+  /// <summary>
+  /// Clears a notification on a smart phone
+  /// </summary>
+  /// <param name="smartphone">The smart phone</param>
+  /// <param name="tag"></param>
+  public void ClearSmartphoneNotification(Smartphone smartphone, string tag)
+  {
+    string message = "clear_notification";
+
+    dynamic data = new ExpandoObject();
+    data.tag = tag;
+
+    switch (smartphone)
+    {
+      case Smartphone.All:
+        _services.Notify.MobileAppSmartphoneSabine(
+          message: message,
+          data: data);
+
+        _services.Notify.MobileAppSmartphoneThomas(
+          message: message,
+          data: data);
+        break;
+
+      case Smartphone.Sabine:
+        _services.Notify.MobileAppSmartphoneSabine(
+          message: message,
+          data: data);
+        break;
+
+      case Smartphone.Thomas:
+        _services.Notify.MobileAppSmartphoneThomas(
+            message: message,
+            data: data);
+        break;
+    }
+  }
+
   private object[] BuildNotificationActions(IEnumerable<NotificationAction> notificationActions)
   {
     bool hasDuplicationIds = notificationActions.Any(item => notificationActions.Count(x => x == item) > 1);

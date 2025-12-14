@@ -52,4 +52,11 @@ public interface INotificationService
     string? tag = null,
     uint timeoutInSeconds = 0,
     IEnumerable<NotificationAction>? notificationActions = null);
+
+  /// <summary>
+  /// Clears a notification on a smart phone
+  /// </summary>
+  /// <param name="smartphone">The smart phone</param>
+  /// <param name="tag"></param>
+  void ClearSmartphoneNotification(Smartphone smartphone, string tag);
 }

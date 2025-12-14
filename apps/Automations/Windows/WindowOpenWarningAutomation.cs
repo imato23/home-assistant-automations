@@ -90,15 +90,17 @@ namespace HomeAssistantAutomations.apps.Automations.Windows
 
         private async Task Notify(CancellationToken cancellationToken)
         {
+            string tag = $"window_open_warning_{windowData.WindowName}";
+
             if (cancellationToken.IsCancellationRequested)
             {
                 Logger.LogInformation("Stopping open-warning timer for {window}", windowData.WindowName);
+                _notificationService.ClearSmartphoneNotification(Smartphone.All, tag);
                 return;
             }
 
             Logger.LogInformation("Sending open-warning message for {window}", windowData.WindowName);
 
-            string tag = $"window_open_warning_{windowData.WindowName}";
             string article = windowData.WindowName.ToLowerInvariant().EndsWith("fenster") ? "Das" : "Die";
             string title = $"{article} {windowData.WindowName} ist noch geöffnet";
             string message = $"{article} {windowData.WindowName} ist bereits seit {Math.Round(openingTime.Elapsed.TotalMinutes)} min geöffnet";
