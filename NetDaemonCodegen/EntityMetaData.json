@@ -545,6 +545,26 @@
           "cSharpName": "Online"
         },
         {
+          "id": "automation.papiertonne_faellig_ausschalten",
+          "friendlyName": "Papiertonne F\u00E4llig Ausschalten",
+          "cSharpName": "PapiertonneFaelligAusschalten"
+        },
+        {
+          "id": "automation.papiertonne_faellig_einschalten",
+          "friendlyName": "Papiertonne F\u00E4llig Einschalten",
+          "cSharpName": "PapiertonneFaelligEinschalten"
+        },
+        {
+          "id": "automation.restmuell_faeliig_einschalten",
+          "friendlyName": "Restm\u00FCll F\u00E4llig Einschalten",
+          "cSharpName": "RestmuellFaeliigEinschalten"
+        },
+        {
+          "id": "automation.restmuell_faellig_ausschalten",
+          "friendlyName": "Restm\u00FCll F\u00E4llig Ausschalten",
+          "cSharpName": "RestmuellFaelligAusschalten"
+        },
+        {
           "id": "automation.sabine_ist_auf_dem_heimweg",
           "friendlyName": "Sabine ist auf dem Heimweg ",
           "cSharpName": "SabineIstAufDemHeimweg"
@@ -670,16 +690,6 @@
           "id": "binary_sensor.all_windows",
           "friendlyName": "Alle Fenster",
           "cSharpName": "AllWindows"
-        },
-        {
-          "id": "binary_sensor.badezimmer_fenster",
-          "friendlyName": "Badezimmer Fenster Status",
-          "cSharpName": "BadezimmerFenster"
-        },
-        {
-          "id": "binary_sensor.badezimmer_fenster_batterie",
-          "friendlyName": "Badezimmer Fenster Batterie",
-          "cSharpName": "BadezimmerFensterBatterie"
         },
         {
           "id": "binary_sensor.badezimmer_fenster_battery_plus_low_2",
@@ -887,11 +897,6 @@
           "cSharpName": "GaestezimmerHeizkoerperthermostatBatterie"
         },
         {
-          "id": "binary_sensor.gaestezimmer_wandthermostat_batterie",
-          "friendlyName": "G\u00E4stezimmer Wandthermostat Batterie",
-          "cSharpName": "GaestezimmerWandthermostatBatterie"
-        },
-        {
           "id": "binary_sensor.garage_klimasensor_battery_plus_low",
           "friendlyName": "Garage Klimasensor Akku fast leer",
           "cSharpName": "GarageKlimasensorBatteryPlusLow"
@@ -922,6 +927,21 @@
           "cSharpName": "GartenRasenmaherrobotorChargingState"
         },
         {
+          "id": "binary_sensor.garten_regensensor_battery_low",
+          "friendlyName": "Garten Regensensor Batteriestand",
+          "cSharpName": "GartenRegensensorBatteryLow"
+        },
+        {
+          "id": "binary_sensor.garten_regensensor_feuchte",
+          "friendlyName": "Garten Regensensor Feuchte",
+          "cSharpName": "GartenRegensensorFeuchte"
+        },
+        {
+          "id": "binary_sensor.garten_regenwassersensor_battery_plus_low",
+          "friendlyName": "Garten Regensensor Akku fast leer",
+          "cSharpName": "GartenRegenwassersensorBatteryPlusLow"
+        },
+        {
           "id": "binary_sensor.gastezimmer_fenster_battery_plus_low",
           "friendlyName": "G\u00E4stezimmer Fenster Akku fast leer",
           "cSharpName": "GastezimmerFensterBatteryPlusLow"
@@ -930,16 +950,6 @@
           "id": "binary_sensor.gastezimmer_heizkorperthermostat_battery_plus_low",
           "friendlyName": "G\u00E4stezimmer Heizk\u00F6rperthermostat Akku fast leer",
           "cSharpName": "GastezimmerHeizkorperthermostatBatteryPlusLow"
-        },
-        {
-          "id": "binary_sensor.gastezimmer_wandthermostat_batterie",
-          "friendlyName": "G\u00E4stezimmer Wandthermostat Batterie",
-          "cSharpName": "GastezimmerWandthermostatBatterie"
-        },
-        {
-          "id": "binary_sensor.gastezimmer_wandthermostat_battery_plus_low",
-          "friendlyName": "G\u00E4stezimmer Wandthermostat Akku fast leer",
-          "cSharpName": "GastezimmerWandthermostatBatteryPlusLow"
         },
         {
           "id": "binary_sensor.google_de",
@@ -1065,11 +1075,6 @@
           "id": "binary_sensor.schlafzimmer_fenster_status",
           "friendlyName": "Schlafzimmer Fenster Status",
           "cSharpName": "SchlafzimmerFensterStatus"
-        },
-        {
-          "id": "binary_sensor.schlafzimmer_wandthermostat_battery_plus_low",
-          "friendlyName": "G\u00E4stezimmer Wandthermostat Akku fast leer",
-          "cSharpName": "SchlafzimmerWandthermostatBatteryPlusLow"
         },
         {
           "id": "binary_sensor.shelly_refigerator_overcurrent",
@@ -1494,6 +1499,11 @@
           "cSharpName": "GarageTorRechtsBatteryReplaced"
         },
         {
+          "id": "button.garten_regenwassersensor_battery_replaced",
+          "friendlyName": "Garten Regensensor Batterie ersetzt",
+          "cSharpName": "GartenRegenwassersensorBatteryReplaced"
+        },
+        {
           "id": "button.gastezimmer_fenster_battery_replaced",
           "friendlyName": "G\u00E4stezimmer Fenster Batterie ersetzt",
           "cSharpName": "GastezimmerFensterBatteryReplaced"
@@ -1502,11 +1512,6 @@
           "id": "button.gastezimmer_heizkorperthermostat_battery_replaced",
           "friendlyName": "G\u00E4stezimmer Heizk\u00F6rperthermostat Batterie ersetzt",
           "cSharpName": "GastezimmerHeizkorperthermostatBatteryReplaced"
-        },
-        {
-          "id": "button.gastezimmer_wandthermostat_battery_replaced",
-          "friendlyName": "G\u00E4stezimmer Wandthermostat Batterie ersetzt",
-          "cSharpName": "GastezimmerWandthermostatBatteryReplaced"
         },
         {
           "id": "button.haustur_battery_replaced",
@@ -1664,11 +1669,6 @@
           "cSharpName": "SchlafzimmerFensterBatteryReplaced"
         },
         {
-          "id": "button.schlafzimmer_wandthermostat_battery_replaced",
-          "friendlyName": "G\u00E4stezimmer Wandthermostat Batterie ersetzt",
-          "cSharpName": "SchlafzimmerWandthermostatBatteryReplaced"
-        },
-        {
           "id": "button.shelly_refigerator_reboot",
           "friendlyName": "K\u00FCche Steckdose K\u00FChlschrank Neu starten",
           "cSharpName": "ShellyRefigeratorReboot"
@@ -1788,7 +1788,7 @@
         {
           "jsonName": "map_id",
           "cSharpName": "MapId",
-          "clrType": null
+          "clrType": "System.Double"
         },
         {
           "jsonName": "running",
@@ -1798,7 +1798,7 @@
         {
           "jsonName": "tasks",
           "cSharpName": "Tasks",
-          "clrType": null
+          "clrType": "System.Collections.Generic.IReadOnlyList\u00601[System.Collections.Generic.IReadOnlyList\u00601[System.Object]]"
         }
       ]
     },
@@ -2113,6 +2113,11 @@
           "jsonName": "dust_collection_count",
           "cSharpName": "DustCollectionCount",
           "clrType": "System.Double"
+        },
+        {
+          "jsonName": "low_lying_areas",
+          "cSharpName": "LowLyingAreas",
+          "clrType": "System.Collections.Generic.IReadOnlyList\u00601[System.Object]"
         }
       ]
     },
@@ -2158,16 +2163,6 @@
           "id": "climate.gaestezimmer_better_thermostat_steuerung",
           "friendlyName": "G\u00E4stezimmer Better Thermostat Steuerung",
           "cSharpName": "GaestezimmerBetterThermostatSteuerung"
-        },
-        {
-          "id": "climate.gaestezimmer_wandthermostat_steuerung",
-          "friendlyName": "G\u00E4stezimmer Wandthermostat Steuerung",
-          "cSharpName": "GaestezimmerWandthermostatSteuerung"
-        },
-        {
-          "id": "climate.gastezimmer_wandthermostat",
-          "friendlyName": "G\u00E4stezimmer Wandthermostat Steuerung",
-          "cSharpName": "GastezimmerWandthermostat"
         },
         {
           "id": "climate.heizkorperthermostat_gastezimmer",
@@ -2588,9 +2583,14 @@
           "cSharpName": "NetdaemonHomeAssistantAutomationsAppsAutomationsWindowsToiletWindowOpenWarningAutomation"
         },
         {
-          "id": "input_boolean.terrassentuer_offen_warnung_stummgeschaltet",
-          "friendlyName": "Terrassent\u00FCr Offen Warnung Stummgeschaltet",
-          "cSharpName": "TerrassentuerOffenWarnungStummgeschaltet"
+          "id": "input_boolean.papiertonne_faellig",
+          "friendlyName": "Papiertonne F\u00E4llig",
+          "cSharpName": "PapiertonneFaellig"
+        },
+        {
+          "id": "input_boolean.restmuell_faellig",
+          "friendlyName": "Restm\u00FCll F\u00E4llig",
+          "cSharpName": "RestmuellFaellig"
         },
         {
           "id": "input_boolean.weihnachststerne",
@@ -2629,6 +2629,26 @@
           "id": "input_number.aktueller_strompreis",
           "friendlyName": "Aktueller Strompreis",
           "cSharpName": "AktuellerStrompreis"
+        },
+        {
+          "id": "input_number.graphhopper_entfernung_sabine",
+          "friendlyName": "GraphHopper Entfernung Sabine",
+          "cSharpName": "GraphhopperEntfernungSabine"
+        },
+        {
+          "id": "input_number.graphhopper_entfernung_thomas",
+          "friendlyName": "GraphHopper Entfernung Thomas",
+          "cSharpName": "GraphhopperEntfernungThomas"
+        },
+        {
+          "id": "input_number.graphhopper_eta_minuten_sabine",
+          "friendlyName": "GraphHopper ETA Minuten Sabine",
+          "cSharpName": "GraphhopperEtaMinutenSabine"
+        },
+        {
+          "id": "input_number.graphhopper_eta_minuten_thomas",
+          "friendlyName": "GraphHopper ETA Minuten Thomas",
+          "cSharpName": "GraphhopperEtaMinutenThomas"
         },
         {
           "id": "input_number.werkstatt_stromzaehler_energie_startwert",
@@ -3291,11 +3311,6 @@
           "id": "select.0x54ef4410012ee588_power_on_behavior",
           "friendlyName": "0x54ef4410012ee588 Power on behavior",
           "cSharpName": "_0x54ef4410012ee588PowerOnBehavior"
-        },
-        {
-          "id": "select.badezimmer_fenster",
-          "friendlyName": "Badezimmer Fenster",
-          "cSharpName": "BadezimmerFenster"
         },
         {
           "id": "select.buro_fenster",
@@ -4315,6 +4330,16 @@
           "cSharpName": "GartenRasenmaherrobotorVersionCompatibility"
         },
         {
+          "id": "sensor.garten_regenwassersensor_battery_last_replaced",
+          "friendlyName": "Garten Regensensor Batterie zuletzt ersetzt",
+          "cSharpName": "GartenRegenwassersensorBatteryLastReplaced"
+        },
+        {
+          "id": "sensor.garten_regenwassersensor_battery_type",
+          "friendlyName": "Garten Regensensor Batterieart",
+          "cSharpName": "GartenRegenwassersensorBatteryType"
+        },
+        {
           "id": "sensor.gastezimmer_fenster_battery_last_replaced",
           "friendlyName": "G\u00E4stezimmer Fenster Batterie zuletzt ersetzt",
           "cSharpName": "GastezimmerFensterBatteryLastReplaced"
@@ -4335,16 +4360,6 @@
           "cSharpName": "GastezimmerHeizkorperthermostatBatteryType"
         },
         {
-          "id": "sensor.gastezimmer_wandthermostat_battery_last_replaced",
-          "friendlyName": "G\u00E4stezimmer Wandthermostat Batterie zuletzt ersetzt",
-          "cSharpName": "GastezimmerWandthermostatBatteryLastReplaced"
-        },
-        {
-          "id": "sensor.gastezimmer_wandthermostat_battery_type",
-          "friendlyName": "G\u00E4stezimmer Wandthermostat Batterieart",
-          "cSharpName": "GastezimmerWandthermostatBatteryType"
-        },
-        {
           "id": "sensor.gemeinde_zeitlarn_aktuelle_warnstufe",
           "friendlyName": "Gemeinde Zeitlarn Aktuelle Warnstufe",
           "cSharpName": "GemeindeZeitlarnAktuelleWarnstufe"
@@ -4353,6 +4368,16 @@
           "id": "sensor.gemeinde_zeitlarn_vorwarnstufe",
           "friendlyName": "Gemeinde Zeitlarn Vorwarnstufe",
           "cSharpName": "GemeindeZeitlarnVorwarnstufe"
+        },
+        {
+          "id": "sensor.graphhopper_entfernung_sabine_formatiert",
+          "friendlyName": "GraphHopper Entfernung Sabine Formatiert",
+          "cSharpName": "GraphhopperEntfernungSabineFormatiert"
+        },
+        {
+          "id": "sensor.graphhopper_entfernung_thomas_formatiert",
+          "friendlyName": "GraphHopper Entfernung Thomas Formatiert",
+          "cSharpName": "GraphhopperEntfernungThomasFormatiert"
         },
         {
           "id": "sensor.haustur_battery_last_replaced",
@@ -4538,16 +4563,6 @@
           "id": "sensor.schlafzimmer_fenster_battery_type",
           "friendlyName": "Schlafzimmer Fenster Batterieart",
           "cSharpName": "SchlafzimmerFensterBatteryType"
-        },
-        {
-          "id": "sensor.schlafzimmer_wandthermostat_battery_last_replaced",
-          "friendlyName": "G\u00E4stezimmer Wandthermostat Batterie zuletzt ersetzt",
-          "cSharpName": "SchlafzimmerWandthermostatBatteryLastReplaced"
-        },
-        {
-          "id": "sensor.schlafzimmer_wandthermostat_battery_type",
-          "friendlyName": "G\u00E4stezimmer Wandthermostat Batterieart",
-          "cSharpName": "SchlafzimmerWandthermostatBatteryType"
         },
         {
           "id": "sensor.slzb_mr1_core_betriebszeit",
@@ -5770,6 +5785,21 @@
           "jsonName": "11-27 11:03",
           "cSharpName": "_11271103",
           "clrType": "System.Object"
+        },
+        {
+          "jsonName": "12-13 14:04",
+          "cSharpName": "_12131404",
+          "clrType": "System.Object"
+        },
+        {
+          "jsonName": "12-13 14:02",
+          "cSharpName": "_12131402",
+          "clrType": "System.Object"
+        },
+        {
+          "jsonName": "12-13 11:57",
+          "cSharpName": "_12131157",
+          "clrType": "System.Object"
         }
       ]
     },
@@ -6013,21 +6043,6 @@
           "cSharpName": "GaestezimmerHeizkoerperthermostatVentilstellung"
         },
         {
-          "id": "sensor.gaestezimmer_wandthermostat_luftfeuchtigkeit",
-          "friendlyName": "G\u00E4stezimmer Wandthermostat Luftfeuchtigkeit",
-          "cSharpName": "GaestezimmerWandthermostatLuftfeuchtigkeit"
-        },
-        {
-          "id": "sensor.gaestezimmer_wandthermostat_luftfeucthigkeit",
-          "friendlyName": "G\u00E4stezimmer Wandthermostat Luftfeuchtigkeit",
-          "cSharpName": "GaestezimmerWandthermostatLuftfeucthigkeit"
-        },
-        {
-          "id": "sensor.gaestezimmer_wandthermostat_temperatur",
-          "friendlyName": "G\u00E4stezimmer Wandthermostat Temperatur",
-          "cSharpName": "GaestezimmerWandthermostatTemperatur"
-        },
-        {
           "id": "sensor.garage_klimasensor_batterie",
           "friendlyName": "Garage Klimasensor Batterie",
           "cSharpName": "GarageKlimasensorBatterie"
@@ -6158,9 +6173,14 @@
           "cSharpName": "GartenRasenmaherrobotorTotalMowingTime"
         },
         {
-          "id": "sensor.gastezimmer_wandthermostat_temperatur",
-          "friendlyName": "G\u00E4stezimmer Wandthermostat Temperatur",
-          "cSharpName": "GastezimmerWandthermostatTemperatur"
+          "id": "sensor.garten_regensensor_batterie",
+          "friendlyName": "Garten Regensensor Batterie",
+          "cSharpName": "GartenRegensensorBatterie"
+        },
+        {
+          "id": "sensor.garten_regenwassersensor_battery_plus",
+          "friendlyName": "Garten Regensensor Batterie\u002B",
+          "cSharpName": "GartenRegenwassersensorBatteryPlus"
         },
         {
           "id": "sensor.haustur_battery_plus",
@@ -7796,11 +7816,6 @@
           "id": "timer.backofen_timer",
           "friendlyName": "Backofen Timer",
           "cSharpName": "BackofenTimer"
-        },
-        {
-          "id": "timer.terrassentuer_offen_warnung_pausiert",
-          "friendlyName": "Terrassent\u00FCr Offen Warnung Pausiert",
-          "cSharpName": "TerrassentuerOffenWarnungPausiert"
         }
       ],
       "attributes": [
@@ -9315,6 +9330,63 @@
           "jsonName": "icon",
           "cSharpName": "Icon",
           "clrType": "System.String"
+        },
+        {
+          "jsonName": "friendly_name",
+          "cSharpName": "FriendlyName",
+          "clrType": "System.String"
+        }
+      ]
+    },
+    {
+      "domain": "input_datetime",
+      "entities": [
+        {
+          "id": "input_datetime.graphhopper_eta_uhrzeit_sabine",
+          "friendlyName": "GraphHopper ETA Uhrzeit Sabine",
+          "cSharpName": "GraphhopperEtaUhrzeitSabine"
+        },
+        {
+          "id": "input_datetime.graphhopper_eta_uhrzeit_thomas",
+          "friendlyName": "GraphHopper ETA Uhrzeit Thomas",
+          "cSharpName": "GraphhopperEtaUhrzeitThomas"
+        }
+      ],
+      "attributes": [
+        {
+          "jsonName": "has_date",
+          "cSharpName": "HasDate",
+          "clrType": "System.Boolean"
+        },
+        {
+          "jsonName": "has_time",
+          "cSharpName": "HasTime",
+          "clrType": "System.Boolean"
+        },
+        {
+          "jsonName": "editable",
+          "cSharpName": "Editable",
+          "clrType": "System.Boolean"
+        },
+        {
+          "jsonName": "hour",
+          "cSharpName": "Hour",
+          "clrType": "System.Double"
+        },
+        {
+          "jsonName": "minute",
+          "cSharpName": "Minute",
+          "clrType": "System.Double"
+        },
+        {
+          "jsonName": "second",
+          "cSharpName": "Second",
+          "clrType": "System.Double"
+        },
+        {
+          "jsonName": "timestamp",
+          "cSharpName": "Timestamp",
+          "clrType": "System.Double"
         },
         {
           "jsonName": "friendly_name",
