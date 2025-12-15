@@ -1,18 +1,24 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
+        <Version>0.1.0</Version>
+        <AssemblyVersion>0.1.0</AssemblyVersion>
+        <FileVersion>0.1.0</FileVersion>
+    </PropertyGroup>
+
+    <PropertyGroup>
         <OutputType>Exe</OutputType>
         <TargetFramework>net10.0</TargetFramework>
         <LangVersion>14.0</LangVersion>
         <Nullable>enable</Nullable>
         <RootNamespace>HomeAssistantAutomations</RootNamespace>
     </PropertyGroup>
-    
+
     <ItemGroup>
         <None Update="$(MSBuildProjectDir)appsettings.Development.json">
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
             <CopyToPublishDirectory>Never</CopyToPublishDirectory>
-        </None>        
+        </None>
         <None Update="$(MSBuildProjectDir)appsettings.json">
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </None>
@@ -24,7 +30,7 @@
     <Target Name="AfterPublishMessage" AfterTargets="Publish">
         <Message Text="Publish done! Copy all content in directory: $(PublishDir) to the `/config/netdaemon4' folder for add-on or your custom folder to deploy." Importance="high" />
     </Target>
-        
+
     <ItemGroup>
         <PackageReference Include="NetDaemon.AppModel" Version="25.48.0" />
         <PackageReference Include="NetDaemon.Runtime" Version="25.48.0" />

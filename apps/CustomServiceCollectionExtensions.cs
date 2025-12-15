@@ -7,6 +7,7 @@ public static class CustomServiceCollectionExtensions
   {
     serviceCollection.AddScoped<INotificationService, NotificationService>();
     serviceCollection.AddScoped<IDeviceTrackerService, DeviceTrackerService>();
+    serviceCollection.AddScoped<IVersionLogger, VersionLogger>();
 
     return serviceCollection;
   }
