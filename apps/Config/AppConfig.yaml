@@ -1,0 +1,2 @@
+HomeAssistantAutomations.apps.Config.AppConfig:
+    GraphHopperUrl: http://192.168.0.15:8989/route
