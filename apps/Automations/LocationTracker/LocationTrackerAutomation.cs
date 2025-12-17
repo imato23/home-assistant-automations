@@ -1,5 +1,6 @@
 using System.Net.Http;
 using System.Net.Http.Json;
+using HomeAssistantAutomations.apps.Config;
 using HomeAssistantGenerated;
 using NetDaemon.HassModel.Entities;
 
@@ -17,16 +18,24 @@ namespace HomeAssistantAutomations.apps.Automations.LocationTracker
     public LocationTrackerAutomation(
       IHaContext haContext,
       ILogger<LocationTrackerAutomation> logger,
-      IHttpClientFactory httpFactory)
+      IHttpClientFactory httpFactory,
+      IAppConfig<AppConfig> appConfig)
     : base(haContext, logger)
     {
       _httpClient = httpFactory.CreateClient();
-      _httpClient.BaseAddress = new Uri("http://tripoli:8989/route");
 
       _deviceTrackerEntity = Entities.DeviceTracker.SmartphoneSabine;
       _etaMinutesSensor = Entities.InputNumber.GraphhopperEtaMinutenSabine;
       _etaTimeSensor = Entities.InputDatetime.GraphhopperEtaUhrzeitSabine;
       _etaDistanceSensor = Entities.InputNumber.GraphhopperEntfernungSabine;
+
+      if (appConfig?.Value?.GraphHopperUrl == null)
+      {
+        Logger.LogError("Could not read Graph Hopper Url from App Config");
+        return;
+      }
+
+      _httpClient.BaseAddress = new Uri(appConfig.Value.GraphHopperUrl);
 
       Calculate(_deviceTrackerEntity.EntityState);
 
@@ -61,23 +70,31 @@ namespace HomeAssistantAutomations.apps.Automations.LocationTracker
               $"?point={currentPosition.Latitude},{currentPosition.Longitude}" +
               $"&point={homePosition.Latitude},{homePosition.Longitude}" +
               $"&profile=car&locale=de&points_encoded=false";
-      GraphHopperResponse? response = await _httpClient.GetFromJsonAsync<GraphHopperResponse>(url);
-
-      if ((response?.Paths) == null || response.Paths.Length == 0)
+      try
       {
-        Logger.LogError("Couldn't read response from GrassHopper API");
-        return;
+        GraphHopperResponse? response = await _httpClient.GetFromJsonAsync<GraphHopperResponse>(url);
+
+        if ((response?.Paths) == null || response.Paths.Length == 0)
+        {
+          Logger.LogError("Couldn't read response from GrassHopper API");
+          return;
+        }
+
+        double distanceInKm = response.Paths[0].Distance / 1000;
+        double etaInMinutes = response.Paths[0].Time / 1000 / 60;
+
+        double etaMinutes = Math.Round(etaInMinutes);
+        DateTime etaTime = DateTime.Now.AddMinutes(etaInMinutes);
+
+        _etaDistanceSensor.SetValue(distanceInKm);
+        _etaMinutesSensor.SetValue(etaMinutes);
+        _etaTimeSensor.SetDatetime(time: new TimeOnly(etaTime.Hour, etaTime.Minute));
+      }
+      catch (Exception ex)
+      {
+        Logger.LogError("Can't get location data from Graph Hopper: {Exception}", ex);
       }
 
-      double distanceInKm = response.Paths[0].Distance / 1000;
-      double etaInMinutes = response.Paths[0].Time / 1000 / 60;
-
-      double etaMinutes = Math.Round(etaInMinutes);
-      DateTime etaTime = DateTime.Now.AddMinutes(etaInMinutes);
-
-      _etaDistanceSensor.SetValue(distanceInKm);
-      _etaMinutesSensor.SetValue(etaMinutes);
-      _etaTimeSensor.SetDatetime(time: new TimeOnly(etaTime.Hour, etaTime.Minute));
     }
   }
 }
