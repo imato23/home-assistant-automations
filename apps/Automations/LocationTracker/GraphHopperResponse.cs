@@ -1,7 +1,6 @@
-public partial class AutoEtaApp
+using HomeAssistantAutomations.apps.Automations.LocationTracker;
+
+public class GraphHopperResponse
 {
-  public class GraphHopperResponse
-  {
-    public Path[] Paths { get; set; }
-  }
+  public required GraphHopperPath[] Paths { get; set; }
 }
