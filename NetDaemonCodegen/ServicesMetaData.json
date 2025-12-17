@@ -149,6 +149,57 @@
       "fields": {}
     }
   },
+  "persistent_notification": {
+    "create": {
+      "fields": {
+        "message": {
+          "required": true,
+          "example": "Please check your configuration.yaml.",
+          "selector": {
+            "text": {
+              "multiple": false,
+              "multiline": false
+            }
+          }
+        },
+        "title": {
+          "example": "Test notification",
+          "selector": {
+            "text": {
+              "multiple": false,
+              "multiline": false
+            }
+          }
+        },
+        "notification_id": {
+          "example": 1234,
+          "selector": {
+            "text": {
+              "multiple": false,
+              "multiline": false
+            }
+          }
+        }
+      }
+    },
+    "dismiss": {
+      "fields": {
+        "notification_id": {
+          "required": true,
+          "example": 1234,
+          "selector": {
+            "text": {
+              "multiple": false,
+              "multiline": false
+            }
+          }
+        }
+      }
+    },
+    "dismiss_all": {
+      "fields": {}
+    }
+  },
   "system_log": {
     "clear": {
       "fields": {}
@@ -160,8 +211,8 @@
           "example": "Something went wrong",
           "selector": {
             "text": {
-              "multiline": false,
-              "multiple": false
+              "multiple": false,
+              "multiline": false
             }
           }
         },
@@ -187,8 +238,8 @@
           "example": "mycomponent.myplatform",
           "selector": {
             "text": {
-              "multiline": false,
-              "multiple": false
+              "multiple": false,
+              "multiline": false
             }
           }
         }
@@ -476,8 +527,8 @@
           "example": "Backup 1",
           "selector": {
             "text": {
-              "multiline": false,
-              "multiple": false
+              "multiple": false,
+              "multiline": false
             }
           }
         },
@@ -485,8 +536,8 @@
           "example": "password",
           "selector": {
             "text": {
-              "multiline": false,
-              "multiple": false
+              "multiple": false,
+              "multiline": false
             }
           }
         },
@@ -550,8 +601,8 @@
           "example": "Partial backup 1",
           "selector": {
             "text": {
-              "multiline": false,
-              "multiple": false
+              "multiple": false,
+              "multiline": false
             }
           }
         },
@@ -559,8 +610,8 @@
           "example": "password",
           "selector": {
             "text": {
-              "multiline": false,
-              "multiple": false
+              "multiple": false,
+              "multiline": false
             }
           }
         },
@@ -584,8 +635,8 @@
           "required": true,
           "selector": {
             "text": {
-              "multiline": false,
-              "multiple": false
+              "multiple": false,
+              "multiline": false
             }
           }
         },
@@ -593,8 +644,8 @@
           "example": "password",
           "selector": {
             "text": {
-              "multiline": false,
-              "multiple": false
+              "multiple": false,
+              "multiline": false
             }
           }
         }
@@ -606,8 +657,8 @@
           "required": true,
           "selector": {
             "text": {
-              "multiline": false,
-              "multiple": false
+              "multiple": false,
+              "multiline": false
             }
           }
         },
@@ -643,8 +694,8 @@
           "example": "password",
           "selector": {
             "text": {
-              "multiline": false,
-              "multiple": false
+              "multiple": false,
+              "multiline": false
             }
           }
         }
@@ -661,8 +712,8 @@
               "domain": [
                 "binary_sensor"
               ],
-              "reorder": false,
-              "multiple": false
+              "multiple": false,
+              "reorder": false
             }
           }
         }
@@ -677,8 +728,8 @@
               "domain": [
                 "binary_sensor"
               ],
-              "reorder": false,
-              "multiple": false
+              "multiple": false,
+              "reorder": false
             }
           }
         }
@@ -693,8 +744,8 @@
               "domain": [
                 "binary_sensor"
               ],
-              "reorder": false,
-              "multiple": false
+              "multiple": false,
+              "reorder": false
             }
           }
         }
@@ -747,8 +798,8 @@
           "example": "1.0.0",
           "selector": {
             "text": {
-              "multiline": false,
-              "multiple": false
+              "multiple": false,
+              "multiline": false
             }
           }
         },
@@ -812,8 +863,8 @@
           "required": true,
           "selector": {
             "text": {
-              "multiline": false,
-              "multiple": false
+              "multiple": false,
+              "multiline": false
             }
           }
         },
@@ -821,8 +872,8 @@
           "example": "NL",
           "selector": {
             "text": {
-              "multiline": false,
-              "multiple": false
+              "multiple": false,
+              "multiline": false
             }
           }
         },
@@ -836,8 +887,8 @@
           "example": "my_conversation_1",
           "selector": {
             "text": {
-              "multiline": false,
-              "multiple": false
+              "multiple": false,
+              "multiline": false
             }
           }
         }
@@ -852,8 +903,8 @@
           "example": "NL",
           "selector": {
             "text": {
-              "multiline": false,
-              "multiple": false
+              "multiple": false,
+              "multiline": false
             }
           }
         },
@@ -876,8 +927,8 @@
               "domain": [
                 "media_player"
               ],
-              "reorder": false,
-              "multiple": false
+              "multiple": false,
+              "reorder": false
             }
           }
         },
@@ -886,8 +937,8 @@
           "required": true,
           "selector": {
             "text": {
-              "multiline": false,
-              "multiple": false
+              "multiple": false,
+              "multiline": false
             }
           }
         },
@@ -901,8 +952,8 @@
           "example": "ru",
           "selector": {
             "text": {
-              "multiline": false,
-              "multiple": false
+              "multiple": false,
+              "multiline": false
             }
           }
         },
@@ -1316,8 +1367,8 @@
           "example": "test_group",
           "selector": {
             "text": {
-              "multiline": false,
-              "multiple": false
+              "multiple": false,
+              "multiline": false
             }
           }
         },
@@ -1325,8 +1376,8 @@
           "example": "My test group",
           "selector": {
             "text": {
-              "multiline": false,
-              "multiple": false
+              "multiple": false,
+              "multiline": false
             }
           }
         },
@@ -1391,8 +1442,8 @@
           "required": true,
           "selector": {
             "text": {
-              "multiline": false,
-              "multiple": false
+              "multiple": false,
+              "multiline": false
             }
           }
         },
@@ -1400,8 +1451,8 @@
           "required": false,
           "selector": {
             "text": {
-              "multiline": false,
-              "multiple": false
+              "multiple": false,
+              "multiline": false
             }
           },
           "filter": {
@@ -1428,8 +1479,8 @@
           "example": "The garage door has been open for 10 minutes.",
           "selector": {
             "text": {
-              "multiline": false,
-              "multiple": false
+              "multiple": false,
+              "multiline": false
             }
           }
         },
@@ -1437,8 +1488,8 @@
           "example": "Your Garage Door Friend",
           "selector": {
             "text": {
-              "multiline": false,
-              "multiple": false
+              "multiple": false,
+              "multiline": false
             }
           }
         },
@@ -1880,8 +1931,8 @@
           "example": "/tmp/snapshot_{{ entity_id.name }}.mp4",
           "selector": {
             "text": {
-              "multiline": false,
-              "multiple": false
+              "multiple": false,
+              "multiline": false
             }
           }
         },
@@ -2019,60 +2070,74 @@
       }
     }
   },
-  "logbook": {
-    "log": {
+  "scene": {
+    "reload": {
+      "fields": {}
+    },
+    "apply": {
       "fields": {
-        "name": {
+        "entities": {
           "required": true,
-          "example": "Kitchen",
+          "example": "light.kitchen: \u0022on\u0022\nlight.ceiling:\n  state: \u0022on\u0022\n  brightness: 80\n",
           "selector": {
-            "text": {
-              "multiline": false,
+            "object": {
               "multiple": false
             }
           }
         },
-        "message": {
-          "required": true,
-          "example": "is being used",
+        "transition": {
           "selector": {
-            "text": {
-              "multiline": false,
-              "multiple": false
-            }
-          }
-        },
-        "entity_id": {
-          "selector": {
-            "entity": {
-              "reorder": false,
-              "multiple": false
-            }
-          }
-        },
-        "domain": {
-          "example": "light",
-          "selector": {
-            "text": {
-              "multiline": false,
-              "multiple": false
+            "number": {
+              "min": 0.0,
+              "max": 300.0,
+              "unit_of_measurement": "seconds",
+              "step": 1.0,
+              "mode": "slider"
             }
           }
         }
       }
-    }
-  },
-  "input_button": {
-    "reload": {
-      "fields": {}
     },
-    "press": {
+    "create": {
+      "fields": {
+        "scene_id": {
+          "required": true,
+          "example": "all_lights",
+          "selector": {
+            "text": {
+              "multiple": false,
+              "multiline": false
+            }
+          }
+        },
+        "entities": {
+          "advanced": true,
+          "example": "light.tv_back_light: \u0022on\u0022\nlight.ceiling:\n  state: \u0022on\u0022\n  brightness: 200\n",
+          "selector": {
+            "object": {
+              "multiple": false
+            }
+          }
+        },
+        "snapshot_entities": {
+          "example": "- light.ceiling\n- light.kitchen\n",
+          "selector": {
+            "entity": {
+              "multiple": true,
+              "reorder": false
+            }
+          }
+        }
+      }
+    },
+    "delete": {
       "fields": {},
       "target": {
         "entity": [
           {
+            "integration": "homeassistant",
             "domain": [
-              "input_button"
+              "scene"
             ]
           }
         ]
@@ -2129,16 +2194,16 @@
     "reload": {
       "fields": {}
     },
-    "set_value": {
+    "turn_on": {
       "fields": {
-        "value": {
-          "required": true,
+        "transition": {
           "selector": {
             "number": {
               "min": 0.0,
-              "max": 9.223372036854776e18,
-              "step": 0.001,
-              "mode": "box"
+              "max": 300.0,
+              "unit_of_measurement": "seconds",
+              "step": 1.0,
+              "mode": "slider"
             }
           }
         }
@@ -2147,31 +2212,76 @@
         "entity": [
           {
             "domain": [
-              "input_number"
+              "scene""scene"
             ]
           }
         ]
       }
+    }
+  },
+  "group": {
+    "reload": {
+      "fields": {}
     },
-    "increment": {
+    "set": {
+      "fields": {
+        "object_id": {
+          "required": true,
+          "example": "test_group",
+          "selector": {
+            "text": {
+              "multiple": false,
+              "multiline": false
+            }
+          }
+        },
+        "name": {
+          "example": "My test group",
+          "selector": {
+            "text": {
+              "multiple": false,
+              "multiline": false
+            }
+          }
+        },
+        "icon": {
+          "example": "mdi:camera",
+          "selector": {
+            "icon": {}
+          }
+        },
+        "entities": {
+          "example": "domain.entity_id1, domain.entity_id2",
+          "selector": {
+            "entity": {
+              "multiple": false,
+              "reorder": false
+            }
+          }
+        },
+        "add_entities": {
+          "example": "domain.entity_id1, domain.entity_id2",
+          "selector": {
+            "text": {
+              "multiple": false,
+              "multiline": false
+            }
+          }
+        }
+      }
+    }
+  },
+  "input_button": {
+    "reload": {
+      "fields": {}
+    },
+    "press": {
       "fields": {},
       "target": {
         "entity": [
           {
             "domain": [
-              "input_number"
-            ]
-          }
-        ]
-      }
-    },
-    "decrement": {
-      "fields": {},
-      "target": {
-        "entity": [
-          {
-            "domain": [
-              "input_number"
+              "input_button"
             ]
           }
         ]
@@ -2225,7 +2335,7 @@
               "timer"
             ]
           }
-        ]
+        }
       }
     },
     "finish": {
@@ -2237,7 +2347,7 @@
               "timer"
             ]
           }
-        ]
+        }
       }
     },
     "change": {
@@ -2309,7 +2419,7 @@
               "input_select"
             ]
           }
-        ]
+        }
       }
     },
     "select_option": {
@@ -2388,8 +2498,8 @@
           "example": "FF:FF:FF:FF:FF:FF",
           "selector": {
             "text": {
-              "multiline": false,
-              "multiple": false
+              "multiple": false,
+              "multiline": false
             }
           }
         },
@@ -2397,8 +2507,8 @@
           "example": "phonedave",
           "selector": {
             "text": {
-              "multiline": false,
-              "multiple": false
+              "multiple": false,
+              "multiline": false
             }
           }
         },
@@ -2406,8 +2516,8 @@
           "example": "Dave",
           "selector": {
             "text": {
-              "multiline": false,
-              "multiple": false
+              "multiple": false,
+              "multiline": false
             }
           }
         },
@@ -2415,8 +2525,8 @@
           "example": "home",
           "selector": {
             "text": {
-              "multiline": false,
-              "multiple": false
+              "multiple": false,
+              "multiline": false
             }
           }
         },
@@ -2460,8 +2570,7 @@
           "example": "Time to wake up!",
           "default": "",
           "selector": {
-            "text": {
-              "multiline": false,
+            "device": {
               "multiple": false
             }
           }
@@ -3154,8 +3263,8 @@
           "required": true,
           "selector": {
             "text": {
-              "multiline": false,
-              "multiple": false
+              "multiple": false,
+              "multiline": false
             }
           }
         }
@@ -3282,8 +3391,8 @@
           },
           "selector": {
             "text": {
-              "multiline": false,
-              "multiple": false
+              "multiple": false,
+              "multiline": false
             }
           }
         },
@@ -3623,8 +3732,8 @@
               "example": "relax",
               "selector": {
                 "text": {
-                  "multiline": false,
-                  "multiple": false
+                  "multiple": false,
+                  "multiline": false
                 }
               }
             },
@@ -3801,8 +3910,8 @@
           },
           "selector": {
             "text": {
-              "multiline": false,
-              "multiple": false
+              "multiple": false,
+              "multiline": false
             }
           }
         },
@@ -4119,8 +4228,8 @@
               "example": "relax",
               "selector": {
                 "text": {
-                  "multiline": false,
-                  "multiple": false
+                  "multiple": false,
+                  "multiline": false
                 }
               }
             },
