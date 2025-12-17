@@ -30,7 +30,6 @@ using NetDaemon.HassModel.Entities;
 using NetDaemon.HassModel.Entities.Core;
 
 namespace HomeAssistantGenerated;
-
 public static class GeneratedExtensions
 {
     ///<summary>Registers all injectable generated types in the serviceCollection</summary>
@@ -200,8 +199,7 @@ public class GeneratedEntityFactory : IEntityFactory
             "vacuum" => new VacuumEntity(haContext, entityId),
             "weather" => new WeatherEntity(haContext, entityId),
             "zone" => new ZoneEntity(haContext, entityId),
-            _ => new Entity(haContext, entityId)
-        };
+            _ => new Entity(haContext, entityId)};
         bool IsNumeric() => haContext.GetState(entityId)?.AttributesJson?.TryGetProperty("unit_of_measurement", out _) ?? false;
     }
 }
@@ -3044,10 +3042,10 @@ public partial record MediaPlayerAttributes
     public string? BrowserID { get; init; }
 
     [JsonPropertyName("video_interaction_required")]
-    public object? VideoInteractionRequired { get; init; }
+    public bool? VideoInteractionRequired { get; init; }
 
     [JsonPropertyName("audio_interaction_required")]
-    public object? AudioInteractionRequired { get; init; }
+    public bool? AudioInteractionRequired { get; init; }
 
     [JsonPropertyName("sound_output")]
     public string? SoundOutput { get; init; }
@@ -4988,7 +4986,7 @@ public partial record UpdateAttributes
     public string? LatestVersion { get; init; }
 
     [JsonPropertyName("release_summary")]
-    public string? ReleaseSummary { get; init; }
+    public object? ReleaseSummary { get; init; }
 
     [JsonPropertyName("release_url")]
     public string? ReleaseUrl { get; init; }
