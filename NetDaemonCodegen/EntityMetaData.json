@@ -325,12 +325,12 @@
         {
           "jsonName": "video_interaction_required",
           "cSharpName": "VideoInteractionRequired",
-          "clrType": "System.Boolean"
+          "clrType": "System.Object"
         },
         {
           "jsonName": "audio_interaction_required",
           "cSharpName": "AudioInteractionRequired",
-          "clrType": "System.Boolean"
+          "clrType": "System.Object"
         },
         {
           "jsonName": "sound_output",
@@ -8253,7 +8253,7 @@
         {
           "jsonName": "release_summary",
           "cSharpName": "ReleaseSummary",
-          "clrType": null
+          "clrType": "System.String"
         },
         {
           "jsonName": "release_url",

@@ -11,5 +11,13 @@
   ],
   "mounts": [
     "source=/mnt/homeassistant/netdaemon6,target=/mnt/homeassistant/netdaemon6,type=bind,consistency=cached"
-  ]
+  ],
+  "runArgs": [
+    "--env",
+    "TZ=Europe/Berlin"
+  ],
+  "containerEnv": {
+    "TZ": "Europe/Berlin"
+  },
+  "postCreateCommand": "ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime"
 }
